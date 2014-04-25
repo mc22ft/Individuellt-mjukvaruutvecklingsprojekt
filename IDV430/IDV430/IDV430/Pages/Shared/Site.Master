@@ -97,22 +97,22 @@
             <div class="icon-wrapper">
               <i class="fa fa-cloud icon-large"></i>
             </div>
-            <h3>Sky's the limit</h3>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <h3>Håll kontakten!</h3>            
+            <p>Här håller du kontakten med familjen och nära med snabba meddelande.</p>
           </div>
           <div class="col-sm-4 text-center overlay-text icons">
             <div class="icon-wrapper">
               <i class="fa fa-picture icon-large"></i>
             </div>
-            <h3>Big Ideas</h3>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <h3>Dela foton!</h3>            
+            <p>Du kan visa upp bilder och dela med dig av vad som händer i ditt liv.</p>
           </div>
           <div class="col-sm-4 text-center overlay-text icons">
             <div class="icon-wrapper">
               <i class="fa fa-lightbulb-o icon-large"></i>
             </div>
-            <h3>Creative Execution</h3>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <h3>Helt privat!</h3>            
+            <p>Denna sida är helt private. Du bestämmer vilka som kan ha tillträde.</p>
           </div>
         </div><!-- /.row -->
       </div>
@@ -120,6 +120,11 @@
       <div class="overlay-bg light"></div>
 
     </section>
+                              <!-- imellan bild
+    ================================================== -->
+            <div id="photoBetween">
+
+            </div>
 
                    <!-- theblogg
     ================================================== -->

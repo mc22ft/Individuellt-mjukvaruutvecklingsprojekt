@@ -73,10 +73,19 @@ margin-right:30px;
     margin: 60px;
 }
 .icon-large{
-    background-image: url(icon/My-Picture-old-school-icon.png) ;
+    
     background-repeat: no-repeat;
     background-position:center; 
-    padding: 100px;
+    padding: 130px;
+}
+.fa-cloud {
+    background-image: url(icon/Chat-icon.png);
+}
+.fa-picture {
+    background-image: url(icon/Pictures-Canon-icon.png);
+}
+.fa-lightbulb-o {
+    background-image: url(icon/Register-icon.png);
 }
 .overlay-text {
     margin-bottom: 40px;
@@ -89,7 +98,10 @@ margin-right:30px;
 }
 
 
-
+#photoBetween {
+    background-image: url('../Pics/night.JPG');
+    background-size: cover;
+}
 
 
 #theBlogg {
