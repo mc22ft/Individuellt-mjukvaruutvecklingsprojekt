@@ -1,0 +1,169 @@
+﻿body {
+    
+   }
+
+
+.head-text {
+    margin-top: 150px;
+    text-align:center;
+}
+
+.middle-text {
+    width: 50%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.middle-text h1 {
+     font-size:50px;
+    font-weight:900;
+    
+}
+
+
+.middle-text h4 {
+    font-size:20px;
+    margin-top:20px;
+    margin-bottom: 50px;
+}
+
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border: 0px solid transparent;
+
+}
+
+
+
+.navbar-default .navbar-brand {
+color: white;
+font-size:25px;
+margin-left:40px;
+
+
+}
+.navbar-default .navbar-nav > li > a {
+color: white;
+font-size:17px;
+margin-right:30px;
+}
+
+
+.opacity {     
+   color:white;
+   
+}
+
+.topMeny {
+    padding-top: 15px;
+}
+
+.blackText {
+    color:black;
+}
+
+.signupButton {
+    background-color:#f0ad4e; 
+}
+
+.icon-wrapper {
+    margin: 60px;
+}
+.icon-large{
+    background-image: url(icon/My-Picture-old-school-icon.png) ;
+    background-repeat: no-repeat;
+    background-position:center; 
+    padding: 100px;
+}
+.overlay-text {
+    margin-bottom: 40px;
+    
+}
+#OmyRoom {
+    background-color:rgb(216, 249, 255);
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+
+
+
+
+#theBlogg {
+    height:400px;
+    background-color:darkorange;
+}
+#theGallery {
+    height:400px;
+    background-color:blueviolet;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4+ ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+}
+
+/* iPhone 5s ----------- */
+/* You've spent way to much on a phone */
+
