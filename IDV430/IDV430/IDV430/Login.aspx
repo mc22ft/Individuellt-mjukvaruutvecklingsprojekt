@@ -9,7 +9,7 @@
             <p>
                <asp:Literal runat="server" ID="StatusText" />
             </p>
-             <a href="admin/Gallery.aspx">Gallery.aspx</a>
+             <a href="pages/gallery/Gallery.aspx">Gallery.aspx</a>
              <a href="admin/admin.aspx">admin.aspx</a>
 
          </asp:PlaceHolder>

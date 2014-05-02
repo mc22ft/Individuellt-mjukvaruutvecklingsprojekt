@@ -112,7 +112,11 @@ margin-right:30px;
     height:400px;
     background-color:blueviolet;
 }
-
+/* JavaScript lägger till denna och tar bort när man scrollar för menyn ska fälja med */
+.fixed {
+    position:fixed;
+    top:0;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 

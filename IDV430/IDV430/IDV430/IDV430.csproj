@@ -125,7 +125,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
-    <Content Include="admin\Gallery.aspx" />
+    <Content Include="Pages\Gallery\Gallery.aspx" />
     <Content Include="Pages\Main\Main.aspx" />
     <Content Include="Pages\Shared\Site.Master" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -178,11 +178,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\Gallery.aspx.cs">
+    <Compile Include="Pages\Gallery\Gallery.aspx.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\Gallery.aspx.designer.cs">
+    <Compile Include="Pages\Gallery\Gallery.aspx.designer.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Main\Main.aspx.cs">
@@ -211,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
     <Folder Include="Pages\Login\" />
     <Folder Include="users\" />
   </ItemGroup>

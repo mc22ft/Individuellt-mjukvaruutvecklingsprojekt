@@ -207,4 +207,16 @@
 
     </form>   
 </body>
+    <script type="text/javascript">
+        var num = 50; //number of pixels before modifying styles
+
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > num) {
+                $('.topMeny').addClass('fixed');
+            } else {
+                $('.topMeny').removeClass('fixed');
+            }
+        });
+    </script> 
+    
 </html>
