@@ -11,6 +11,8 @@
             </p>
              <a href="pages/gallery/Gallery.aspx">Gallery.aspx</a>
              <a href="admin/admin.aspx">admin.aspx</a>
+             <a href="pages/User/UserAdmin.aspx">UserAdmin.aspx</a>
+             <a href="pages/User/UserMainPage.aspx">UserMainPage.aspx</a>
 
          </asp:PlaceHolder>
 

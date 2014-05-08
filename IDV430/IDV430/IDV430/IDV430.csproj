@@ -125,6 +125,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Pages\User\UserAdmin.aspx" />
     <Content Include="Pages\Gallery\Gallery.aspx" />
     <Content Include="Pages\Main\Main.aspx" />
     <Content Include="Pages\Shared\Site.Master" />
@@ -133,6 +134,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Pages\User\UserMainPage.aspx" />
+    <Content Include="Pages\User\UserOneBlogPage.aspx" />
     <Content Include="Pics\background.JPG" />
     <Content Include="Pics\boat.JPG" />
     <Content Include="Content\icon\My-Picture-old-school-icon.png" />
@@ -178,6 +181,19 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Blog.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\DAL\BlogDAL.cs" />
+    <Compile Include="Model\DAL\CommentDAL.cs" />
+    <Compile Include="Model\DAL\DALBase.cs" />
+    <Compile Include="Model\Service.cs" />
+    <Compile Include="Pages\User\UserAdmin.aspx.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\UserAdmin.aspx.designer.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Gallery\Gallery.aspx.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +215,20 @@
     <Compile Include="Pages\Shared\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\User\UserMainPage.aspx.cs">
+      <DependentUpon>UserMainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\UserMainPage.aspx.designer.cs">
+      <DependentUpon>UserMainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\UserOneBlogPage.aspx.cs">
+      <DependentUpon>UserOneBlogPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\UserOneBlogPage.aspx.designer.cs">
+      <DependentUpon>UserOneBlogPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -211,7 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Pages\Login\" />
     <Folder Include="users\" />
   </ItemGroup>

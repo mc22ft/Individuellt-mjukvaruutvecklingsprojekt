@@ -19,6 +19,9 @@ namespace IDV430.App_Start
             //Logga in/Registrering
             routes.MapPageRoute("Login", "Login", "~/Login.aspx");
             routes.MapPageRoute("Register", "Register", "~/Register.aspx");
+            //Navigering
+            routes.MapPageRoute("OneBlogPage", "OneBlogPage/{id}", "~/pages/User/UserOneBlogPage.aspx");
+            routes.MapPageRoute("BlogListPage", "Blog", "~/pages/User/UserMainPage.aspx");
             //Deafult
             routes.MapPageRoute("Default", "", "~/Pages/Main/Main.aspx");
             ////Error

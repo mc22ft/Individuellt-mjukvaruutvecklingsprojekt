@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <asp:loginview runat="server">
         <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
-        <LoggedInTemplate>Jag är inloggads</LoggedInTemplate>
+        <LoggedInTemplate>Jag är inloggad</LoggedInTemplate>
     </asp:loginview>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
