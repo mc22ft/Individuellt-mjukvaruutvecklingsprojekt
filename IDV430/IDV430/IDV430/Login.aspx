@@ -19,31 +19,42 @@
 
 
          <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
-            <div style="margin-bottom: 10px">
-               <asp:Label runat="server" AssociatedControlID="UserName">User name</asp:Label>
-               <div class="blackText">
-                  <asp:TextBox runat="server" ID="UserName" />
-               </div>
-            </div>
-            <div style="margin-bottom: 10px">
-               <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
-               <div class="blackText">
-                  <asp:TextBox runat="server" ID="Password" TextMode="Password" />
-               </div>
-            </div>
-            <div style="margin-bottom: 10px">
-               <div>
-                  <asp:Button runat="server" OnClick="SignIn" Text="Log in" />
-               </div>
+             <div id="formid" class="form-group">
+                <div style="margin-bottom: 10px">
+                   <asp:Label runat="server" AssociatedControlID="UserName">Användarnamn</asp:Label>
+                   <div class="blackText">
+                      <asp:TextBox runat="server" ID="UserName" class="form-control" />
+                   </div>
+                </div>
+                <div style="margin-bottom: 10px">
+                   <asp:Label runat="server" AssociatedControlID="Password">Lösenord</asp:Label>
+                   <div class="blackText">
+                      <asp:TextBox runat="server" ID="Password" TextMode="Password" class="form-control" />
+                   </div>
+                </div>
+                <div style="margin-bottom: 10px">
+                   <div>
+                      <asp:Button runat="server" OnClick="SignIn" Text="Logga in" class="btn btn-default" />
+                   </div>
+                </div>
             </div>
          </asp:PlaceHolder>
+
+
+
          <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
             <div>
                <div>
                   <asp:Button runat="server" OnClick="SignOut" Text="Log out" />
                </div>
-            </div>
+            </div>         
          </asp:PlaceHolder>
+
+    <script type="text/javascript">
+
+        window.scrollBy(0, 320);
+
+    </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">

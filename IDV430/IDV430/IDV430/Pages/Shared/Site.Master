@@ -9,24 +9,19 @@
     <%-- Script som länkas in - Måste använda tilde täcken här!--%>
     <%: System.Web.Optimization.Styles.Render("~/Content/bootstrap") %>
     <%: System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap") %>
-
-    
-
 </head>
 <body>
     <form id="form1" runat="server">
-
-
-        <div class="opacity">        
-            <header style="background-image: url('../../Pics/test1.png'); background-size: cover; padding-bottom: 60%; filter: brightness(0.2);" class="img-responsive">
+           
+            <div class="opacity">        
+     <header style="background-image: url('../../Pics/test1.png'); background-size: cover; padding-bottom: 60%; filter: brightness(0.2);" class="img-responsive">
          
             <%-- Boostrap meny! --%>
-                        
 
-        <!-- Fixed navbar -->           
+            <!-- Fixed navbar -->           
 
 
-           <div class="navbar navbar-default topMeny">                 
+           <div class="navbar navbar-default topMeny" >                 
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                   <span class="icon-bar"></span>
@@ -38,7 +33,7 @@
 
               <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                  <li><a href="#OmyRoom">Om myRoom</a></li>                  
+                  <li><a id="myTest" href="#OmyRoom">Om myRoom</a></li>                  
                   <li><a href="#theBlogg">theBlogg</a></li>
                   <li><a href="#theGallery">theGallery</a></li>
                   <li><a href="#Kontakt">Kontakt</a></li>
@@ -47,19 +42,29 @@
                 </ul>               
               </div>
            </div>
-                
-           
             
-                <asp:ContentPlaceHolder ID="head" runat="server">
+        <div class="middle-text">       
+                   
+            <h1>MyRoom</h1>
 
+            <h4>Håll kontakten med din familjen och nära vänner med hjälp av MyRoom. Här kan du dela med dig av ditt liv. Med ord och bilder.</h4> 
+            
+            <asp:HyperLink class="btn btn-primary" ID="Register" runat="server" Text="Starta här!" NavigateUrl='<%$ RouteUrl:routename = Register %>' />
+            
+        </div> 
+    </header>
+</div>
+
+
+
+            <asp:ContentPlaceHolder ID="head" runat="server">
+             
                 
                 </asp:ContentPlaceHolder>
             
-        </header>
-       </div>
+       
        
         <main>
-
 
 
 
@@ -223,6 +228,9 @@
                 $('.topMeny').removeClass('fixed');
             }
         });
+
+        
+
     </script> 
     
 </html>

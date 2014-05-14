@@ -5,6 +5,7 @@ using System;
 using System.Web;
 using System.Web.UI.WebControls;
 
+
 namespace IDV430
 {
     public partial class Login : System.Web.UI.Page
@@ -15,7 +16,8 @@ namespace IDV430
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                   
+                    StatusText.Text = string.Format("Hej {0}!", User.Identity.GetUserName());
                     phLoginStatus.Visible = true;
                     LogoutButton.Visible = true;
                     LoginForm.Visible = false;

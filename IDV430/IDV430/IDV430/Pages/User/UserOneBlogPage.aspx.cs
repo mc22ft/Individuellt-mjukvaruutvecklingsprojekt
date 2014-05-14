@@ -31,6 +31,16 @@ namespace IDV430.Pages.User
             //ctrl.Visible = false;
             //var test = ctrl.ToString();
             //http://stackoverflow.com/questions/4955769/better-way-to-find-control-in-asp-net
+
+
+
+            //Control con = this.FindAnyControl("");
+            //HyperTest1.Visible = false;
+
+            //con.Visible = false;
+
+            //Control con = this.FindControl()
+            //con.Visible = false;
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -47,10 +57,7 @@ namespace IDV430.Pages.User
                 {
 
 
-                    Control con = this.FindAnyControl("HyperTest");
-
-
-                    con.Visible = false;
+                   
 
 
                     //Redigera.Visible = true;
@@ -254,8 +261,6 @@ namespace IDV430.Pages.User
     }
 
 
-    
-
 
 
 
@@ -263,6 +268,37 @@ namespace IDV430.Pages.User
 
     public static class ControlExtensions
 {
+        public static T FindControl<T>(System.Web.UI.ControlCollection Controls) where T : class
+        {
+
+            T found = default(T);
+
+            if (Controls != null && Controls.Count > 0)
+            {
+
+                for (int i = 0; i < Controls.Count; i++)
+                {
+
+                    found = Controls[i] as T;
+
+                    if (found != null)
+                    {
+
+                        break;
+
+                    }
+
+                    else
+
+                        found = FindControl<T>(Controls[i].Controls);
+
+                }
+
+            }
+
+            return found;
+
+        }
     /// <summary>
     /// recursively finds a child control of the specified parent.
     /// </summary>
@@ -310,6 +346,12 @@ namespace IDV430.Pages.User
             }
             return parent.FindControl(controlId);
         }
+
+
+
+
+
+
 }
 
     //public void Page_Load(object sender, EventArgs e)
