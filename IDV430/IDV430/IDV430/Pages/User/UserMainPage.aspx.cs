@@ -32,7 +32,9 @@ namespace IDV430.Pages.UserMainPage
         //     string sortByExpression
         public IEnumerable<IDV430.Model.Blog> ListBlogPost_GetData()
         {
-            return Service.GetBlogs();
+             var blog = Service.GetBlogs();
+            
+             return blog;
         }
     }
 }

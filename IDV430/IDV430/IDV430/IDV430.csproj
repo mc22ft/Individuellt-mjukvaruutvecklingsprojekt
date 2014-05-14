@@ -87,6 +87,7 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -134,6 +135,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Pages\User\UserEditBlog.aspx" />
     <Content Include="Pages\User\UserMainPage.aspx" />
     <Content Include="Pages\User\UserOneBlogPage.aspx" />
     <Content Include="Pics\background.JPG" />
@@ -214,6 +216,13 @@
     </Compile>
     <Compile Include="Pages\Shared\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\UserEditBlog.aspx.cs">
+      <DependentUpon>UserEditBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\UserEditBlog.aspx.designer.cs">
+      <DependentUpon>UserEditBlog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\User\UserMainPage.aspx.cs">
       <DependentUpon>UserMainPage.aspx</DependentUpon>

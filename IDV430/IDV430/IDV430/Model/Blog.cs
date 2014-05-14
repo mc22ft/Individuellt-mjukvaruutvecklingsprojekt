@@ -15,7 +15,9 @@ namespace IDV430.Model
 
         public string Content { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } //Kommer från databasen
+
+        public string newDate { get; set; } //Formaterad för precentation
 
     }
 }

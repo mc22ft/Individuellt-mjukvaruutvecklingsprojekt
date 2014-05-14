@@ -23,7 +23,14 @@ namespace IDV430.Pages.User
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //call the recursive FindControl method
+            Control ctrl = this.FindControlRecursive("temptest");
+            //var t = ctrl.ClientID;
+            //ctrl.FindControl("HyperTest").Visible = false;
+            
+            //ctrl.Visible = false;
+            //var test = ctrl.ToString();
+            //http://stackoverflow.com/questions/4955769/better-way-to-find-control-in-asp-net
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -33,11 +40,37 @@ namespace IDV430.Pages.User
             try
             {
                 var blog = Service.GetOneBlogById(id);
+                               
+                //blog.newDate = blog.Date.ToString("yyyymmdd");
 
                 if (User.Identity.Name == blog.UserID)
                 {
-                    DeleteLinkButton.visible = true;
-                    //BackHyperLink.visble = true;
+
+
+                    Control con = this.FindAnyControl("HyperTest");
+
+
+                    con.Visible = false;
+
+
+                    //Redigera.Visible = true;
+                    //DeleteLinkButton99.Visible = true;
+                    //BackHyperLink.Visible = true;
+
+                    //LoginView1.LoggedInTemplate.FindControl("LoginName1");
+
+                    //LoginView LoginV = (LoginView)FindControl("LoginView1");
+                    //LoggedInTemplate tre = (LoggedInTemplate)LoginV.FindControl("FormView1");
+
+
+                    //FormView tre = (FormView)LoginV.FindControl("FormView1");
+                    
+                    //HyperLink ett = (HyperLink)FindControl("HyperTest");
+
+                    //ett.Visible = false;
+
+                    ////HyperTest
+                    
                 }
 
 
@@ -64,6 +97,14 @@ namespace IDV430.Pages.User
                     Comment.UserID = User.Identity.Name;
                     Comment.PostBlogID = id;
                     Service.SaveComment(Comment);
+                    //Skickar meddelande om att kommentar har 
+                    //Page.SetTempData("SuccessMessage", "Annonsen är updaterad.");
+                    //Skickas till annonsen som har updaterats in med hjälp av id
+                    Response.RedirectToRoute("OneBlogPage", null);
+                    Context.ApplicationInstance.CompleteRequest();
+
+
+
                 }
                 catch (Exception) //Fångar upp fel
                 {
@@ -94,8 +135,48 @@ namespace IDV430.Pages.User
             if (ModelState.IsValid)
             {
                 try
+                {                 
+
+                    //Får ut id
+                    var id = int.Parse(e.CommandArgument.ToString());
+
+                    //var idUser = User.Identity.Name;                    
+                    // User id och id på blog inlägg finns = Mathias och 16
+
+                    //Hämta från databasen vem som skrivit blog inlägg
+
+                    //var blogobj = Service.GetOneBlogById(id);
+
+                    //obj tomt
+                    //var obj = new IDV430.Model.Blog();                   
+
+                    Service.DeleteBlog(id);
+
+                    //Service.DeleteAnnons(id);
+                    ////Skickar meddelande om att annonsen sparades
+                    //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
+                    ////Skickas till annonsen som har lagts in med hjälp av id
+                    Response.RedirectToRoute("BlogListPage", null);
+                    Context.ApplicationInstance.CompleteRequest();
+
+                }
+                catch (Exception)
                 {
-                   
+                    ModelState.AddModelError(String.Empty, "Ett fel inträffade då annonsen skulle tas bort.");
+                }
+
+            }
+        }
+
+
+        //TAR BORT EN KOMMENTAR
+        protected void DeleteCommentLinkButton_Command(object sender, CommandEventArgs e)
+        {
+            //ModelState.IsValid = när man jobbar med data annotation(bindning)
+            if (ModelState.IsValid)
+            {
+                try
+                {
 
                     //Får ut id
                     var id = int.Parse(e.CommandArgument.ToString());
@@ -110,16 +191,15 @@ namespace IDV430.Pages.User
                     //obj tomt
                     //var obj = new IDV430.Model.Blog();
 
-                    
-
-                    Service.DeleteBlog(id);
+                    Service.DeleteComment(id);
 
                     //Service.DeleteAnnons(id);
                     ////Skickar meddelande om att annonsen sparades
                     //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
+
                     ////Skickas till annonsen som har lagts in med hjälp av id
-                    //Response.RedirectToRoute("AnnonsList", null);
-                    //Context.ApplicationInstance.CompleteRequest();
+                    Response.RedirectToRoute("OneBlogPage", null); //In med blog id
+                    Context.ApplicationInstance.CompleteRequest();
 
                 }
                 catch (Exception)
@@ -129,6 +209,115 @@ namespace IDV430.Pages.User
 
             }
         }
+
+
+        //UPDATERAR EN KOMMENTAR
+        // The id parameter name should match the DataKeyNames value set on the control
+        public void CommentFormView_UpdateItem(int id)
+        {
+            IDV430.Model.Comment item = null;
+            // Load the item here, e.g. item = MyDataLayer.Find(id);
+            if (item == null)
+            {
+                // The item wasn't found
+                ModelState.AddModelError("", String.Format("Item with id {0} was not found", id));
+                return;
+            }
+            TryUpdateModel(item);
+            if (ModelState.IsValid)
+            {
+                // Save changes here, e.g. MyDataLayer.SaveChanges();
+
+            }
+        }
+
+        
+
+        protected void Label1_PreRender(object sender, EventArgs e)
+        {
+            
+            Control ctrl = this.FindControlRecursive("Label1");
+            ctrl.Visible = true;
+
+        }
+
+
+
+
+       
+
+
+
+
+       //Control ctrl = this.FindControlRecursive("Label1");
+       //     ctrl.Visible = true;
     }
+
+
+    
+
+
+
+
+
+
+    public static class ControlExtensions
+{
+    /// <summary>
+    /// recursively finds a child control of the specified parent.
+    /// </summary>
+    /// <param name="control"></param>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public static Control FindControlRecursive(this Control control, string id)
+    {
+        if (control == null) return null;
+         //try to find the control at the current level
+        Control ctrl = control.FindControl(id);
+
+        if (ctrl == null)
+        {
+            //search the children
+            foreach (Control child in control.Controls)
+            {
+                ctrl = FindControlRecursive(child, id);
+
+                if (ctrl != null) break;
+            }
+        }
+        return ctrl;
+    }
+
+ public static Control FindAnyControl(this Page page, string controlId)
+        {
+            return FindControlRecursive(controlId, page.Form);
+        }
+
+        public static Control FindAnyControl(this UserControl control, string controlId)
+        {
+            return FindControlRecursive(controlId, control);
+        }
+
+        public static Control FindControlRecursive(string controlId, Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                Control result = FindControlRecursive(controlId, control);
+                if (result != null)
+                {
+                    return result;
+                }
+            }
+            return parent.FindControl(controlId);
+        }
+}
+
+    //public void Page_Load(object sender, EventArgs e)
+    //{
+    //    //call the recursive FindControl method
+    //    Control ctrl = this.FindControlRecursive("my_control_id");
+    //}
+
+
 }
 

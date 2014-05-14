@@ -59,7 +59,6 @@ namespace IDV430.Model.DAL
             {
                 try
                 {
-
                     //var CommentObj = new Comment();
                     //CommentObj.PostBlogID = BlogID;
 

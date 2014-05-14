@@ -31,23 +31,23 @@
                             
 
                             <ItemTemplate>
+                                <div class="Frame add well well-lg">
+                                    <%-- HeadLine --%>
+                                    <div>                                    
+                                        <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
+                                    </div>
 
-                                <%-- HeadLine --%>
-                                <div>                                    
-                                    <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
+                                    <%-- datum - UserNamn --%>
+                                    <div>
+                                        <p><%#: Item.Date.ToString("d") %> Skrivet av: <%#: Item.UserID %></p>                          
+                                    </div>
+
+                                    <%-- Content i blog --%>
+                                    <div>
+                                        <p><%#: Item.Content %></p>
+                                    </div>
+
                                 </div>
-
-                                <%-- datum - UserNamn --%>
-                                <div>
-                                    <p><%#: Item.Date %> <%#: Item.UserID %></p>
-                                </div>
-
-                                <%-- Content i blog --%>
-                                <div>
-                                    <p><%#: Item.Content %></p>
-                                </div>
-
-
                                
 
 

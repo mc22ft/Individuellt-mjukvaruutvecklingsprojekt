@@ -22,6 +22,7 @@ namespace IDV430.App_Start
             //Navigering
             routes.MapPageRoute("OneBlogPage", "OneBlogPage/{id}", "~/pages/User/UserOneBlogPage.aspx");
             routes.MapPageRoute("BlogListPage", "Blog", "~/pages/User/UserMainPage.aspx");
+            routes.MapPageRoute("UserEditBlog", "Edit/{id}", "~/pages/User/UserEditBlog.aspx");
             //Deafult
             routes.MapPageRoute("Default", "", "~/Pages/Main/Main.aspx");
             ////Error

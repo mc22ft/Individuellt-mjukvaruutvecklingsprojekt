@@ -49,7 +49,43 @@ namespace IDV430.Model.DAL
         //updaterar en blog
         public void updateBlog(Blog blog)
         {
-            throw new NotImplementedException();
+            // Skapar och initierar ett anslutningsobjekt.
+            using (SqlConnection conn = CreateConnection())
+            {
+                try
+                {
+                    // exekveras specifierad lagrad procedur.
+                    SqlCommand cmd = new SqlCommand("dbo.usp_updateBlog", conn); //Skapa nu update Procedure
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //Lägger till de paramterar den lagrade proceduren kräver
+                    cmd.Parameters.Add("@HeadLineBlog", SqlDbType.VarChar, 50).Value = blog.HeadLine;
+                    cmd.Parameters["@HeadLineBlog"].Value = blog.HeadLine;
+
+                    cmd.Parameters.Add("@ContentBlog", SqlDbType.VarChar, -1).Value = blog.Content;
+                    cmd.Parameters["@ContentBlog"].Value = blog.Content;
+
+                    //Id
+                    cmd.Parameters.Add("@PostBlogID", SqlDbType.Int, 4).Value = blog.PostBlogID;
+                    cmd.Parameters["@PostBlogID"].Value = blog.PostBlogID;
+                   
+
+                    //Öppnar anslutningen, databasen
+                    conn.Open();
+
+                    //Exekvera den lagrade proceduren.
+                    cmd.ExecuteNonQuery();
+
+                    // Hämtar primärnyckelns värde för den nya posten och tilldelar kategori-objektet värdet.
+                    blog.PostBlogID = (int)cmd.Parameters["@PostBlogID"].Value;
+                }
+                catch
+                {
+                    // Kastar ett eget undantag om ett undantag kastas.
+                    throw new ApplicationException("Det blev något fel i hämtningen från databasen!");
+                }
+            }
+
         }
 
 
@@ -169,11 +205,11 @@ namespace IDV430.Model.DAL
                 try
                 {
                     // exekveras specifierad lagrad procedur.
-                    SqlCommand cmd = new SqlCommand("AppSchema.usp_002_delete_Annons", conn);
+                    SqlCommand cmd = new SqlCommand("dbo.usp_DelBlog", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     //Lägger till den parameter som den lagrade proceduren kärver
-                    cmd.Parameters.Add("@PostBlogID", SqlDbType.Int, 4).Value = id;
+                    cmd.Parameters.Add("@BlogPostID", SqlDbType.Int, 4).Value = id;
 
                     //Öppnar anslutningen, databasen
                     conn.Open();

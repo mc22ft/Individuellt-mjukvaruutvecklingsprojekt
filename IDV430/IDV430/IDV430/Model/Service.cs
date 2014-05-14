@@ -78,6 +78,11 @@ namespace IDV430.Model
         }
 
 
-       
+
+
+        internal static void DeleteComment(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -34,7 +34,6 @@ C:\0001 IDV430\IDV430\IDV430\IDV430\bin\WebGrease.dll
 C:\0001 IDV430\IDV430\IDV430\IDV430\bin\Antlr3.Runtime.pdb
 C:\0001 IDV430\IDV430\IDV430\IDV430\bin\System.Web.Optimization.xml
 C:\0001 IDV430\IDV430\IDV430\IDV430\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.csprojResolveAssemblyReference.cache
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\IDV430.dll.config
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\IDV430.dll
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\IDV430.pdb
@@ -70,3 +69,4 @@ C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\Newt
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\System.Web.Optimization.xml
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.dll
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.pdb
+C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.csprojResolveAssemblyReference.cache
