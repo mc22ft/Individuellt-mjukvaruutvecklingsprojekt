@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      
     <div class="opacity">        
-     <header style="background-image: url('../../Pics/test1.png'); background-size: cover; padding-bottom: 60%; filter: brightness(0.2);" class="img-responsive">
+     <header style="background-image: url('../../Pics/boat.JPG'); background-size: cover; padding-bottom: 60%; filter: brightness(0.2);" class="img-responsive">
          
             <%-- Boostrap meny! --%>
 
@@ -17,8 +17,8 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MyRoom</a>
+                </button>    
+                  <asp:HyperLink class="navbar-brand" ID="HyperLink3" runat="server" NavigateUrl='<%$ RouteUrl:routename = Default %>' Text="MyRoom" />
               </div>
 
               <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
