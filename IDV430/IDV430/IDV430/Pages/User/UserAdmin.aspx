@@ -3,6 +3,12 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+    
+
+
+
 </asp:Content>
 
 
@@ -53,4 +59,52 @@
                     </LoggedInTemplate>
                 </asp:LoginView> 
 
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="UnderMain1" runat="server">
+
+     <%-- --%>
+                <asp:LoginView ID="LoginView2" runat="server">
+
+                    <%-- --%>
+                    <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
+
+                    <%-- --%>
+                    <LoggedInTemplate>
+
+                        <asp:ListView ID="ListView1" runat="server"
+                            ItemType="IDV430.Model.Blog"
+                            SelectMethod="GetmyListView_GetData"
+                            >
+
+                            <LayoutTemplate>
+                                <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                            </LayoutTemplate>                            
+
+                            <ItemTemplate>
+                                <div class="Frame add well well-lg">
+                                    <%-- HeadLine --%>
+                                    <div>                                    
+                                        <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
+                                    </div>
+                                    <%-- datum - UserNamn --%>
+                                    <div>
+                                        <p>Datum <%#: Item.Date.ToString("d") %> </p>                          
+                                    </div>
+                                </div>                            
+
+
+                            </ItemTemplate>
+                            
+
+
+                            <EmptyDataTemplate>
+                                <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
+                                      <h3>Det finns inga annonser.</h3> 
+                            </EmptyDataTemplate>
+
+                        </asp:ListView>
+                        
+                    </LoggedInTemplate>
+                </asp:LoginView> 
 </asp:Content>

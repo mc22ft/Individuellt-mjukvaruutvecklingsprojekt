@@ -13,6 +13,15 @@ namespace IDV430.Pages.User {
     public partial class UserEditBlog {
         
         /// <summary>
+        /// FormView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FormView FormView2;
+        
+        /// <summary>
         /// FormView1 control.
         /// </summary>
         /// <remarks>
@@ -20,5 +29,14 @@ namespace IDV430.Pages.User {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FormView FormView1;
+        
+        /// <summary>
+        /// CommentEditFormView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView CommentEditFormView;
     }
 }

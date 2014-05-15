@@ -53,34 +53,7 @@ namespace IDV430.Pages.User
                                
                 //blog.newDate = blog.Date.ToString("yyyymmdd");
 
-                if (User.Identity.Name == blog.UserID)
-                {
-
-
-                   
-
-
-                    //Redigera.Visible = true;
-                    //DeleteLinkButton99.Visible = true;
-                    //BackHyperLink.Visible = true;
-
-                    //LoginView1.LoggedInTemplate.FindControl("LoginName1");
-
-                    //LoginView LoginV = (LoginView)FindControl("LoginView1");
-                    //LoggedInTemplate tre = (LoggedInTemplate)LoginV.FindControl("FormView1");
-
-
-                    //FormView tre = (FormView)LoginV.FindControl("FormView1");
-                    
-                    //HyperLink ett = (HyperLink)FindControl("HyperTest");
-
-                    //ett.Visible = false;
-
-                    ////HyperTest
-                    
-                }
-
-
+               
 
                 return blog;
             }
@@ -135,118 +108,16 @@ namespace IDV430.Pages.User
             return Service.GetComments(id);
         }
 
-        //Tar bort en annons med hjälp av id som "fångas" av "e.CommandArgument"
-        protected void DeleteLinkButton_Command(object sender, CommandEventArgs e)
-        {
-            //ModelState.IsValid = när man jobbar med data annotation(bindning)
-            if (ModelState.IsValid)
-            {
-                try
-                {                 
+        
 
-                    //Får ut id
-                    var id = int.Parse(e.CommandArgument.ToString());
-
-                    //var idUser = User.Identity.Name;                    
-                    // User id och id på blog inlägg finns = Mathias och 16
-
-                    //Hämta från databasen vem som skrivit blog inlägg
-
-                    //var blogobj = Service.GetOneBlogById(id);
-
-                    //obj tomt
-                    //var obj = new IDV430.Model.Blog();                   
-
-                    Service.DeleteBlog(id);
-
-                    //Service.DeleteAnnons(id);
-                    ////Skickar meddelande om att annonsen sparades
-                    //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
-                    ////Skickas till annonsen som har lagts in med hjälp av id
-                    Response.RedirectToRoute("BlogListPage", null);
-                    Context.ApplicationInstance.CompleteRequest();
-
-                }
-                catch (Exception)
-                {
-                    ModelState.AddModelError(String.Empty, "Ett fel inträffade då annonsen skulle tas bort.");
-                }
-
-            }
-        }
-
-
-        //TAR BORT EN KOMMENTAR
-        protected void DeleteCommentLinkButton_Command(object sender, CommandEventArgs e)
-        {
-            //ModelState.IsValid = när man jobbar med data annotation(bindning)
-            if (ModelState.IsValid)
-            {
-                try
-                {
-
-                    //Får ut id
-                    var id = int.Parse(e.CommandArgument.ToString());
-
-                    //var idUser = User.Identity.Name;                    
-                    // User id och id på blog inlägg finns = Mathias och 16
-
-                    //Hämta från databasen vem som skrivit blog inlägg
-
-                    //var blogobj = Service.GetOneBlogById(id);
-
-                    //obj tomt
-                    //var obj = new IDV430.Model.Blog();
-
-                    Service.DeleteComment(id);
-
-                    //Service.DeleteAnnons(id);
-                    ////Skickar meddelande om att annonsen sparades
-                    //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
-
-                    ////Skickas till annonsen som har lagts in med hjälp av id
-                    Response.RedirectToRoute("OneBlogPage", null); //In med blog id
-                    Context.ApplicationInstance.CompleteRequest();
-
-                }
-                catch (Exception)
-                {
-                    ModelState.AddModelError(String.Empty, "Ett fel inträffade då annonsen skulle tas bort.");
-                }
-
-            }
-        }
-
-
-        //UPDATERAR EN KOMMENTAR
-        // The id parameter name should match the DataKeyNames value set on the control
-        public void CommentFormView_UpdateItem(int id)
-        {
-            IDV430.Model.Comment item = null;
-            // Load the item here, e.g. item = MyDataLayer.Find(id);
-            if (item == null)
-            {
-                // The item wasn't found
-                ModelState.AddModelError("", String.Format("Item with id {0} was not found", id));
-                return;
-            }
-            TryUpdateModel(item);
-            if (ModelState.IsValid)
-            {
-                // Save changes here, e.g. MyDataLayer.SaveChanges();
-
-            }
-        }
 
         
 
-        protected void Label1_PreRender(object sender, EventArgs e)
-        {
-            
-            Control ctrl = this.FindControlRecursive("Label1");
-            ctrl.Visible = true;
 
-        }
+       
+
+        
+
 
 
 

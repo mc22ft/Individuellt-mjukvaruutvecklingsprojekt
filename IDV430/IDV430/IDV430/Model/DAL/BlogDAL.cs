@@ -225,5 +225,63 @@ namespace IDV430.Model.DAL
                 }
             }
         }
+
+        public IEnumerable<Blog> GetAllBlogById(string id)
+        {
+            //Skapar och initierar anslutningsobjektet
+            using (var conn = CreateConnection())
+            {
+                try
+                {
+                    //Listobj plats för ?? objekt
+                    var blog = new List<Blog>(200);
+
+                    //lagrade proceduren
+                    var cmd = new SqlCommand("dbo.usp_GetAllBlogById", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.Add("@UserID", SqlDbType.VarChar, 50).Value = id;
+
+                    //öppnar anslutningen
+                    conn.Open();
+
+                    //skapar ett SqlDataReader-objekt och returnerar en referens till objektet.
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        //Tar reda på vilken index de olika kolumenrna har
+                        var PostBlogIDIndex = reader.GetOrdinal("PostBlogID");
+                        var UserIDIndex = reader.GetOrdinal("UserID");
+                        var HeadLineBlogIndex = reader.GetOrdinal("HeadLineBlog");
+                        var ContentBlogIndex = reader.GetOrdinal("ContentBlog");
+                        var DateIndex = reader.GetOrdinal("Date");
+
+                        //Så länge det finns poster kvar i listan. Annars false
+                        while (reader.Read())
+                        {
+                            blog.Add(new Blog
+                            {
+                                //Hämtar ut kolumnerna med egenskaperna
+                                PostBlogID = reader.GetInt32(PostBlogIDIndex),
+                                UserID = reader.GetString(UserIDIndex),
+                                HeadLine = reader.GetString(HeadLineBlogIndex),
+                                Content = reader.GetString(ContentBlogIndex),
+                                Date = reader.GetDateTime(DateIndex)
+                            });
+
+                        }
+                    }
+
+                    //Tar bort det mine som inte används
+                    blog.TrimExcess();
+
+                    return blog;
+                }
+                catch
+                {
+                    throw new ApplicationException("Det blev något fel när data skulle hämtas från databasen!");
+                }
+            }
+        }
     }
 }

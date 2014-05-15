@@ -126,6 +126,18 @@ margin-right:30px;
 
 }
 
+.fixedBlack {
+    position:fixed;
+    background-color: black;
+    z-index:77;
+     left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+
+}
+
+
 .add{
     border:solid 1px black;
     

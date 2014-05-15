@@ -62,6 +62,12 @@ namespace IDV430.Model
             BlogDAL.DeleteBlog(id);
         }
 
+        //Hämtar alla bloginlägg som till hör en anv
+        public IEnumerable<Blog> GetAllBlogById(string id)
+        {
+            return BlogDAL.GetAllBlogById(id);
+        }
+
 //---------------------------------------------------------------------------------------------------------
         //kommentar
 
@@ -80,9 +86,11 @@ namespace IDV430.Model
 
 
 
-        internal static void DeleteComment(int id)
+        public void DeleteComment(int id)
         {
-            throw new NotImplementedException();
+            CommentDAL.DeleteComment(id);
         }
+
+       
     }
 }

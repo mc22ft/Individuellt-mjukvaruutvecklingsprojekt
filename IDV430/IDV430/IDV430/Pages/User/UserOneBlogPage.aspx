@@ -22,8 +22,7 @@
 
             <asp:FormView ID="FormView1" runat="server"
                 ItemType="IDV430.Model.Blog"
-                SelectMethod="GetOneBlogPost_GetItem"
-                >
+                SelectMethod="GetOneBlogPost_GetItem">
 
                 <ItemTemplate>
                     <%-- HeadLine --%>
@@ -41,33 +40,8 @@
                         <div>
                             <p><%#: Item.Content %></p>
                           <%--  <asp:TextBox ID="TextBox1" runat="server" Text='<%#: Item.Content %>' Visible="false"></asp:TextBox>--%>
-                        </div>  
-                                          <p>(Endast ägaren till inlägget ska se dessa knappar! Node problem!)</p>
-                        <div>
-                            <asp:HyperLink runat="server" id="HyperTest" Text="Redigera" NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID  }) %>' class="btn btn-primary btn-xs" />
-                            
-
-                        <%-- Raderablog inlägg om du är ägaren! --%>
-
-                        
-                        <%-- Bottoms, "ta bort" ligger det javascript på 
-                
-                          <asp:LinkButton ID="Redigera" runat="server" Text="Redigera" class="btn btn-primary btn-xs" Visible="False" />    --%>
-
-                            <asp:LinkButton runat="server" ID="DeleteLinkButton99" Text="Ta bort" class="btn btn-danger btn-xs"
-                                    CausesValidation="false" 
-                                    OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("HeadLine")) %>'
-                                    OnCommand="DeleteLinkButton_Command"          
-                                    CommandArgument='<%$ RouteValue:id %>' 
-                                    Visible="true" />
-
-                            <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("BlogListPage", null) %>' class="btn btn-primary btn-xs" Visible="True" />
-                      </div>
-
-
-
+                        </div>
                     </div>
-
 
                 </ItemTemplate>
                 <EmptyDataTemplate>
@@ -183,8 +157,7 @@
 
             <asp:ListView ID="FormView1" runat="server"
                 ItemType="IDV430.Model.Comment"
-                SelectMethod="GetListComments_GetItem"
-                UpdateMethod="CommentFormView_UpdateItem" 
+                SelectMethod="GetListComments_GetItem"                 
                 >
 
                 <ItemTemplate>
@@ -211,45 +184,8 @@
                             <p><%#: Item.CommentTxt %></p>
                         </div>
                     
-                        <%--  NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID  }) %>' --%>
-                        <div>
-                            <p>(Endast ägaren till blog inlägget ska se denna knapp! Node problem!)</p>
-
-                            <asp:HyperLink runat="server" id="HyperTest" Text="Redigera" class="btn btn-primary btn-xs" />
-                        
-
-                            <asp:LinkButton runat="server" ID="DeleteLinkButton99" Text="Ta bort" class="btn btn-danger btn-xs"
-                                CausesValidation="false" 
-                                OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("Name")) %>'
-                                OnCommand="DeleteCommentLinkButton_Command"   
-                                CommandArgument='<%$ RouteValue:id %>' 
-                                />
-                    
-
-                            <asp:Label ID="Label1" runat="server" Visible="false"
-                        
-                                onload="Label1_PreRender"
-                                Text="Label">
-
-                                <asp:HyperLink runat="server" ID="TestButton" Text="TEST BUTTON" />
-
-
-                            </asp:Label>
-                        </div>
+                       
                     </div>
-
-
-                        <%-- JavaScript (ska in i extern fil) --%>
-                <script type="text/javascript">
-                    function AlertDelete(Name) {
-                        if (confirm("Ta bort annonsen " + Name + " permanent!") == true) {
-                            return true;
-                        }
-                        else {
-                            return false;
-                        }
-                    }
-                </script> 
 
 
                 </ItemTemplate>

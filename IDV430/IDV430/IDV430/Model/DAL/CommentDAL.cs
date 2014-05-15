@@ -124,6 +124,35 @@ namespace IDV430.Model.DAL
             }
         }
 
-        
+
+
+        public void DeleteComment(int id)
+        {
+            // Skapar och initierar ett anslutningsobjekt.
+            using (SqlConnection conn = CreateConnection())
+            {
+                try
+                {
+                    // exekveras specifierad lagrad procedur.
+                    SqlCommand cmd = new SqlCommand("dbo.usp_DelComment", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //Lägger till den parameter som den lagrade proceduren kärver
+                    cmd.Parameters.Add("@CommentID", SqlDbType.Int, 4).Value = id;
+
+                    //Öppnar anslutningen, databasen
+                    conn.Open();
+
+
+                    //Exekvera den lagrade proceduren.
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    // Kastar ett eget undantag om ett undantag kastas.
+                    throw new ApplicationException("Det blev något fel i hämtningen från databasen!");
+                }
+            }
+        }
     }
 }
