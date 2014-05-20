@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IDV430.Pages.Main {
+namespace IDV430.Pages.User {
     
     
-    public partial class Main {
+    public partial class Gallery {
         
         /// <summary>
-        /// Menu control.
+        /// MenuLoggedIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::IDV430.Pages.Shared.Menu Menu;
+        protected global::IDV430.Pages.Shared.MenuLoggedIn MenuLoggedIn;
     }
 }

@@ -126,8 +126,11 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Pages\Shared\Menu.ascx" />
+    <Content Include="Pages\Shared\MenuLoggedIn.ascx" />
+    <Content Include="Pages\User\Contact.aspx" />
+    <Content Include="Pages\User\Gallery.aspx" />
     <Content Include="Pages\User\UserAdmin.aspx" />
-    <Content Include="Pages\Gallery\Gallery.aspx" />
     <Content Include="Pages\Main\Main.aspx" />
     <Content Include="Pages\Shared\Site.Master" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -189,19 +192,40 @@
     <Compile Include="Model\DAL\CommentDAL.cs" />
     <Compile Include="Model\DAL\DALBase.cs" />
     <Compile Include="Model\Service.cs" />
+    <Compile Include="Pages\Shared\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\MenuLoggedIn.ascx.cs">
+      <DependentUpon>MenuLoggedIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\MenuLoggedIn.ascx.designer.cs">
+      <DependentUpon>MenuLoggedIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\User\UserAdmin.aspx.cs">
       <DependentUpon>UserAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\User\UserAdmin.aspx.designer.cs">
       <DependentUpon>UserAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Gallery\Gallery.aspx.cs">
-      <DependentUpon>Gallery.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Gallery\Gallery.aspx.designer.cs">
-      <DependentUpon>Gallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Main\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
@@ -250,7 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pages\Login\" />
     <Folder Include="users\" />
   </ItemGroup>
   <PropertyGroup>

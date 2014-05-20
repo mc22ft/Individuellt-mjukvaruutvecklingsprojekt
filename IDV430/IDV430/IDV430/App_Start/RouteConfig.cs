@@ -20,10 +20,16 @@ namespace IDV430.App_Start
             routes.MapPageRoute("Login", "Login", "~/Login.aspx");
             routes.MapPageRoute("Register", "Register", "~/Register.aspx");
             //Navigering
-            routes.MapPageRoute("OneBlogPage", "OneBlogPage/{id}", "~/pages/User/UserOneBlogPage.aspx");
-            routes.MapPageRoute("BlogListPage", "Blog", "~/pages/User/UserMainPage.aspx");
+            routes.MapPageRoute("OneBlogPage", "EnBlogg/{id}", "~/pages/User/UserOneBlogPage.aspx");
+            routes.MapPageRoute("BlogListPage", "BloggLista", "~/pages/User/UserMainPage.aspx");
             routes.MapPageRoute("UserEditBlog", "Edit/{id}", "~/pages/User/UserEditBlog.aspx");
-            routes.MapPageRoute("UserAdmin", "UserPage", "~/pages/User/UserAdmin.aspx");
+            routes.MapPageRoute("UserAdmin", "MinSida", "~/pages/User/UserAdmin.aspx");
+
+            //Gallery
+            routes.MapPageRoute("Gallery", "Galleriet", "~/pages/User/Gallery.aspx");
+
+            //Contact
+            routes.MapPageRoute("Contact", "Kontakt", "~/pages/User/Contact.aspx");
 
             //Deafult
             routes.MapPageRoute("Default", "", "~/Pages/Main/Main.aspx");

@@ -1,7 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Shared/Site.Master" AutoEventWireup="true" CodeBehind="UserEditBlog.aspx.cs" Inherits="IDV430.Pages.User.UserEditBlog" %>
 
+<%@ Register Src="~/Pages/Shared/MenuLoggedIn.ascx" TagPrefix="uc1" TagName="MenuLoggedIn" %>
+
+
+
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
+
 </asp:Content>
 
 
@@ -101,10 +110,9 @@
                                           
                         <div>
                             <asp:LinkButton runat="server" Text="Spara" CommandName="Update" class="btn btn-success btn-xs" />
-
                                                      
                             
-                            <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("UserAdmin", null) %>' class="btn btn-primary btn-xs" />
+                            <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID })%>' class="btn btn-primary btn-xs" />
 
                         <%-- Raderablog inlägg om du är ägaren! --%>
 
@@ -157,8 +165,7 @@
 
             <asp:ListView ID="CommentEditFormView" runat="server"
                 ItemType="IDV430.Model.Comment"
-                SelectMethod="GetListComments_GetItem"
-                UpdateMethod="CommentFormView_UpdateItem"
+                SelectMethod="GetListComments_GetItem"                
                 DataKeyNames="CommentID"
                 >
 
@@ -183,23 +190,18 @@
 
                         <%-- Kommentar i blog --%>
                         <div>
-                            <p><%#: Item.CommentTxt %></p>
+                            <p><%#: Item.CommentID  %></p>
                         </div>
                     
                         <%--  NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID  }) %>' --%>
-                        <div>
-                            <p>(Endast ägaren till blog inlägget ska se denna knapp! Node problem!)</p>
+                        <div> 
 
-                            
-
-                            <asp:HyperLink runat="server" id="HyperTest" Text="Redigera" NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.CommentID}) %>' class="btn btn-primary btn-xs" />
-                        
 
                             <asp:LinkButton runat="server" ID="DeleteCommentLinkButton" Text="Ta bort" class="btn btn-danger btn-xs"
                                 CausesValidation="false" 
                                 OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("Name")) %>'
                                 OnCommand="DeleteCommentLinkButton_Command"   
-                                CommandArgument='<%$ RouteValue:id %>'
+                                CommandArgument='<%# Item.CommentID %>'
                                 />
                     <%-- 
                         CommandArgument='<%$ RouteValue:id %>'

@@ -156,25 +156,7 @@ namespace IDV430.Pages.User
         }
 
 
-        //UPDATERAR EN KOMMENTAR
-        // The id parameter name should match the DataKeyNames value set on the control
-        public void CommentFormView_UpdateItem(int id)
-        {
-            IDV430.Model.Comment item = null;
-            // Load the item here, e.g. item = MyDataLayer.Find(id);
-            if (item == null)
-            {
-                // The item wasn't found
-                ModelState.AddModelError("", String.Format("Item with id {0} was not found", id));
-                return;
-            }
-            TryUpdateModel(item);
-            if (ModelState.IsValid)
-            {
-                // Save changes here, e.g. MyDataLayer.SaveChanges();
-
-            }
-        }
+       
 
         // The id parameter name should match the DataKeyNames value set on the control
         public void BlogEditFormView_UpdateItem(int PostBlogID)
@@ -197,7 +179,7 @@ namespace IDV430.Pages.User
                     //Skickar meddelande om att annonsen har updaterats
                     //Page.SetTempData("SuccessMessage", "Annonsen är updaterad.");
                     //Skickas till annonsen som har updaterats in med hjälp av id
-                    Response.RedirectToRoute("UserAdmin", new { id = blog.PostBlogID });
+                    Response.RedirectToRoute("UserEditBlog", new { id = blog.PostBlogID });
                     Context.ApplicationInstance.CompleteRequest();
                 }
             }
@@ -215,6 +197,7 @@ namespace IDV430.Pages.User
             FormView1.Visible = true;
 
         }
+
 
         
 

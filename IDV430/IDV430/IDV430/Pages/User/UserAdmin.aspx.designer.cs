@@ -13,6 +13,15 @@ namespace IDV430.Pages.Blog {
     public partial class Blog {
         
         /// <summary>
+        /// MenuLoggedIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::IDV430.Pages.Shared.MenuLoggedIn MenuLoggedIn;
+        
+        /// <summary>
         /// LoginView1 control.
         /// </summary>
         /// <remarks>

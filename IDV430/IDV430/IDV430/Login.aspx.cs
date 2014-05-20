@@ -16,11 +16,17 @@ namespace IDV430
             {
                 if (User.Identity.IsAuthenticated)
                 {
+                    ////Skickas till annonsen som har lagts in med hjälp av id
+                    Response.RedirectToRoute("BlogListPage", null); //In med blog id
+                    Context.ApplicationInstance.CompleteRequest();
                    
-                    StatusText.Text = string.Format("Hej {0}!", User.Identity.GetUserName());
-                    phLoginStatus.Visible = true;
-                    LogoutButton.Visible = true;
-                    LoginForm.Visible = false;
+                    //StatusText.Text = string.Format("Hej {0}!", User.Identity.GetUserName());
+                    //phLoginStatus.Visible = true;
+                    //LogoutButton.Visible = true;
+                    //LoginForm.Visible = false;
+
+
+                    
                 }
                 else
                 {

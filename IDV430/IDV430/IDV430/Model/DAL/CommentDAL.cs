@@ -82,7 +82,7 @@ namespace IDV430.Model.DAL
                     using (var reader = cmd.ExecuteReader())
                     {
                         //Tar reda på vilken index de olika kolumenrna har
-                        
+                        var commentId = reader.GetOrdinal("CommentID");
                         var UserIDIndex = reader.GetOrdinal("UserID");
                         var NameIndex = reader.GetOrdinal("Name");
                         var EpostIndex = reader.GetOrdinal("Epost");
@@ -98,7 +98,7 @@ namespace IDV430.Model.DAL
                             comment.Add(new Comment
                             {
                                 //Hämtar ut kolumnerna med egenskaperna
-                                
+                                CommentID = reader.GetInt32(commentId),
                                 UserID = reader.GetString(UserIDIndex),
                                 Name = reader.GetString(NameIndex),
                                 Epost = reader.GetString(EpostIndex),
@@ -154,5 +154,8 @@ namespace IDV430.Model.DAL
                 }
             }
         }
+
+           
+        
     }
 }
