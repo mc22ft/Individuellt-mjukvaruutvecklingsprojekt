@@ -3,6 +3,14 @@
    }
 
 
+.fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened {
+    width:500px;
+    
+}
+
+
+
+
 .head-text {
     margin-top: 150px;
     text-align:center;

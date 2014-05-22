@@ -28,7 +28,7 @@
                                 
                                 <li><asp:HyperLink ID="myBlogg" runat="server" Text="myBlogg" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li>
 
-                                <li><asp:HyperLink ID="myGallery" runat="server" Text="myGallery" NavigateUrl='<%$ RouteUrl:routename = Gallery %>' /></li>                                
+                                <li><asp:HyperLink ID="myGallery" runat="server" Text="myGallery" NavigateUrl='<%$ RouteUrl:routename = GalleryPage %>' /></li>                                
 
                                 <li><asp:HyperLink ID="ContactUs" runat="server" Text="Kontakt oss" NavigateUrl='<%$ RouteUrl:routename = Contact %>' /></li>
 

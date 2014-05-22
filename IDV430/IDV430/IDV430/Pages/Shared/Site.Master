@@ -12,6 +12,17 @@
     <%-- Script som länkas in - Måste använda tilde täcken här!--%>
     <%: System.Web.Optimization.Styles.Render("~/Content/bootstrap") %>
     <%: System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap") %>
+
+    <%-- För att fancybox ska fungera! --%>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="stylesheet" href="../../Content/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="../../Scripts/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="../../Scripts/jquery.fancybox.pack.js"></script>
+    
+        <link rel="stylesheet" href="../../Content/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="../../Scripts/jquery.fancybox-thumbs.js"></script>
+
+
 </head>
     <%-- Påminelser och anteckningar här!
         
@@ -57,8 +68,52 @@
                 </asp:ContentPlaceHolder>
             </div>
 
-     
+            
 
+            <script type="text/javascript">
+
+
+              
+                $(document).ready(function () {
+                    //event.preventDefault();
+                    $(".fancybox-thumb").fancybox({
+                        parent: "form:first",
+                        minWidth: '75%',
+                        minHeight: '75%',
+                        //autoSize: false,
+                        //autoResize: false,
+                        //autoHeight:true,
+                        //autoWidth: true,
+                        fitToView: false,
+                        //autoSize: false,
+                        //prevEffect: 'none',
+                        //nextEffect: 'none',
+                        afterClose: function () { location.reload(); return; },
+                        helpers: {
+                            title: {
+                                type: 'outside'
+                            },
+                            thumbs: {
+                                width: 50,
+                                height: 50
+                            }
+                        }
+                        
+                            
+                    });                    
+                });
+
+              
+
+                //$(document).ready(function () {
+                //    $(".fancybox-thumb").fancybox(
+                //        {
+                //            afterClose: function () { location.reload(); return; }
+                //        });
+                //});
+
+                
+            </script>
 <!-- Om my room
     ================================================== -->
    <section id="OmyRoom" class="content text-center light">

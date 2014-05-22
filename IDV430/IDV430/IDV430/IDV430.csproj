@@ -118,9 +118,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\blank.gif" />
+    <Content Include="Content\fancybox_buttons.png" />
+    <Content Include="Content\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox_loading.gif" />
+    <Content Include="Content\fancybox_overlay.png" />
+    <Content Include="Content\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox_sprite.png" />
     <Content Include="Content\icon\Chat-icon.png" />
     <Content Include="Content\icon\Pictures-Canon-icon.png" />
     <Content Include="Content\icon\Register-icon.png" />
+    <Content Include="Content\jquery.fancybox-buttons.css" />
+    <Content Include="Content\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\jquery.fancybox.css" />
     <Content Include="Content\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -129,7 +139,7 @@
     <Content Include="Pages\Shared\Menu.ascx" />
     <Content Include="Pages\Shared\MenuLoggedIn.ascx" />
     <Content Include="Pages\User\Contact.aspx" />
-    <Content Include="Pages\User\Gallery.aspx" />
+    <Content Include="Pages\User\GalleryPage.aspx" />
     <Content Include="Pages\User\UserAdmin.aspx" />
     <Content Include="Pages\Main\Main.aspx" />
     <Content Include="Pages\Shared\Site.Master" />
@@ -162,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -191,6 +207,8 @@
     <Compile Include="Model\DAL\BlogDAL.cs" />
     <Compile Include="Model\DAL\CommentDAL.cs" />
     <Compile Include="Model\DAL\DALBase.cs" />
+    <Compile Include="Model\FileData.cs" />
+    <Compile Include="Model\Gallery.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Pages\Shared\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
@@ -213,12 +231,12 @@
     <Compile Include="Pages\User\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\User\Gallery.aspx.cs">
-      <DependentUpon>Gallery.aspx</DependentUpon>
+    <Compile Include="Pages\User\GalleryPage.aspx.cs">
+      <DependentUpon>GalleryPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\User\Gallery.aspx.designer.cs">
-      <DependentUpon>Gallery.aspx</DependentUpon>
+    <Compile Include="Pages\User\GalleryPage.aspx.designer.cs">
+      <DependentUpon>GalleryPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\User\UserAdmin.aspx.cs">
       <DependentUpon>UserAdmin.aspx</DependentUpon>
@@ -274,6 +292,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\fancybox\" />
+    <Folder Include="Content\Files\" />
+    <Folder Include="Content\ThumImage\" />
+    <Folder Include="Data\Images\" />
     <Folder Include="users\" />
   </ItemGroup>
   <PropertyGroup>

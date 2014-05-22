@@ -26,7 +26,7 @@ namespace IDV430.App_Start
             routes.MapPageRoute("UserAdmin", "MinSida", "~/pages/User/UserAdmin.aspx");
 
             //Gallery
-            routes.MapPageRoute("Gallery", "Galleriet", "~/pages/User/Gallery.aspx");
+            routes.MapPageRoute("GalleryPage", "Galleriet", "~/pages/User/GalleryPage.aspx");
 
             //Contact
             routes.MapPageRoute("Contact", "Kontakt", "~/pages/User/Contact.aspx");
