@@ -43,13 +43,13 @@
         <div id="formid" class="form-group">
             <div style="margin-bottom: 10px">
                 <asp:Label runat="server" AssociatedControlID="UserName">Användarnamn</asp:Label>
-                <div class="blackText">
+                <div>
                     <asp:TextBox runat="server" ID="UserName" class="form-control" />
                 </div>
             </div>
             <div style="margin-bottom: 10px">
                 <asp:Label runat="server" AssociatedControlID="Password">Lösenord</asp:Label>
-                <div class="blackText">
+                <div>
                     <asp:TextBox runat="server" ID="Password" TextMode="Password" class="form-control" />
                 </div>
             </div>
@@ -74,6 +74,7 @@
     <script type="text/javascript">
 
 
+        document.getElementById('formid').scrollIntoView(true);
 
         //window.scrollBy(0, 320);
 

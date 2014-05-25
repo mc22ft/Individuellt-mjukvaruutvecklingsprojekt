@@ -1,43 +1,65 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="IDV430.Register" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="IDV430.Register" %>
 
-<!DOCTYPE html>
+<%@ Register Src="~/Pages/Shared/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body style="font-family: Arial, Helvetica, sans-serif; font-size: small">
-    <form id="form1" runat="server">
-    <div>
-        <h4 style="font-size: medium">Register a new user</h4>
-        <hr />
-        <p>
-            <asp:Literal runat="server" ID="StatusMessage" />
-        </p>                
-        <div style="margin-bottom:10px">
-            <asp:Label runat="server" AssociatedControlID="UserName">User name</asp:Label>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <uc1:Menu runat="server" ID="Menu" />
+
+</asp:Content>
+
+
+
+<asp:Content ID="Register" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+
+        <div id="formid" class="form-group">
+
+            <h4>Register a new user</h4>
+            
+            <p>
+                <asp:Literal runat="server" ID="StatusMessage" />
+            </p> 
+                           
+            <div style="margin-bottom:10px">
+                <asp:Label runat="server" AssociatedControlID="UserName" >Användarnamn</asp:Label>
+                <div>
+                    <asp:TextBox runat="server" ID="UserName" class="form-control" />                
+                </div>
+            </div>
+            <div style="margin-bottom:10px">
+                <asp:Label runat="server" AssociatedControlID="Password">Lösenord</asp:Label>
+                <div>
+                    <asp:TextBox runat="server" ID="Password" TextMode="Password" class="form-control" />                
+                </div>
+            </div>
+            <div style="margin-bottom:10px">
+                <asp:Label runat="server" AssociatedControlID="ConfirmPassword">Bekräfta lösenord</asp:Label>
+                <div>
+                    <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" class="form-control" />                
+                </div>
+            </div>
             <div>
-                <asp:TextBox runat="server" ID="UserName" />                
+                <div>
+                    <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" class="btn btn-default"/>
+                </div>
             </div>
         </div>
-        <div style="margin-bottom:10px">
-            <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
-            <div>
-                <asp:TextBox runat="server" ID="Password" TextMode="Password" />                
-            </div>
-        </div>
-        <div style="margin-bottom:10px">
-            <asp:Label runat="server" AssociatedControlID="ConfirmPassword">Confirm password</asp:Label>
-            <div>
-                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" />                
-            </div>
-        </div>
-        <div>
-            <div>
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" />
-            </div>
-        </div>
-    </div>
-    </form>
-</body>
-</html>
+
+
+    </asp:PlaceHolder>
+
+     <script type="text/javascript">
+
+
+         document.getElementById('formid').scrollIntoView(true);
+
+         //window.scrollBy(0, 320);
+
+    </script>
+
+</asp:Content>
+

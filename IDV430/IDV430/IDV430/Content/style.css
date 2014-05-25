@@ -2,6 +2,15 @@
     
    }
 
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+*/
 
 .fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened {
     width:500px;
@@ -17,6 +26,7 @@
 }
 
 .middle-text {
+    color:#CECFD6;
     width: 50%;
     text-align:center;
     margin-left: auto;
