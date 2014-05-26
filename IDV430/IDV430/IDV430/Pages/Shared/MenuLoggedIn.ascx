@@ -24,13 +24,13 @@
                         <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
                             <ul class="nav navbar-nav loginNav">   
                                                    
-                                <li><asp:HyperLink ID="AllBlogg" runat="server" Text="AllBlogg" NavigateUrl='<%$ RouteUrl:routename = BlogListPage %>' /></li>          
+                                <li><asp:HyperLink ID="AllBlogg" runat="server" Text="Bloggar" NavigateUrl='<%$ RouteUrl:routename = BlogListPage %>' /></li>          
                                 
-                                <li><asp:HyperLink ID="myBlogg" runat="server" Text="myBlogg" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li>
+                                <li><asp:HyperLink ID="myBlogg" runat="server" Text="minBlogg" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li>
 
-                                <li><asp:HyperLink ID="myGallery" runat="server" Text="myGallery" NavigateUrl='<%$ RouteUrl:routename = GalleryPage %>' /></li>                                
+                                <li><asp:HyperLink ID="myGallery" runat="server" Text="Galleriet" NavigateUrl='<%$ RouteUrl:routename = GalleryPage %>' /></li>                                
 
-                                <li><asp:HyperLink ID="ContactUs" runat="server" Text="Kontakt oss" NavigateUrl='<%$ RouteUrl:routename = Contact %>' /></li>
+                                <li><asp:HyperLink ID="ContactUs" runat="server" Text="Kontakta oss" NavigateUrl='<%$ RouteUrl:routename = Contact %>' /></li>
 
                                 <li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" OnClick="SignOut" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>
 

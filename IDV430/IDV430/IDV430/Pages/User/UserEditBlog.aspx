@@ -26,7 +26,7 @@
 
                 <ItemTemplate>
                     <%-- HeadLine --%>
-                    <div class="Frame add well well-lg">
+                    <div class="Frame add well well-lg edit-blog">
                         <div>                                    
                           <h1><%#: Item.HeadLine %></h1>
                         </div>
@@ -90,7 +90,7 @@
 
                 <EditItemTemplate>
                     <%-- HeadLine --%>
-                    <div class="Frame add well well-lg">
+                    <div class="Frame add well well-lg edit-blog">
                         <div>            
                             <asp:Label ID="Label2" runat="server" Text="Rubrik:"></asp:Label>               
                             <asp:TextBox ID="TestBox" runat="server" Text='<%# BindItem.HeadLine %>'></asp:TextBox>         

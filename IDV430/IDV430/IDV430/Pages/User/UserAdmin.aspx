@@ -32,28 +32,33 @@
                             RenderOuterTables="false">
                             <%-- --%>
                             <InsertItemTemplate>
-
-                                <div>
-                                    <label>Namnet på blog inlägget:</label>
+                                
+                                <div class="new-blog-headline">
+                                    <h2>Skapa nytt inlägg</h2>
                                 </div>
+
+                                <div class="form-group blog-form">
+                                    <div>
+                                        <label>Namnet på blog inlägget:</label>
+                                    </div>
                         
-                                <div>
-                                    <asp:TextBox ID="BlogName" runat="server" Text='<%# BindItem.HeadLine %>' />
-                                </div>
+                                    <div>
+                                        <asp:TextBox ID="BlogName" class="BlogName" runat="server" Text='<%# BindItem.HeadLine %>' />
+                                    </div>
 
-                                <div>
-                                    <label>Skriv innehållet:</label>
-                                </div>
+                                    <div>
+                                        <label>Skriv innehållet:</label>
+                                    </div>
 
-                                <div>
-                                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# BindItem.Content %>' TextMode="MultiLine" />
-                                </div>
+                                    <div>
+                                        <asp:TextBox ID="BlogContent" class="BlogContent" runat="server" Text='<%# BindItem.Content %>' TextMode="MultiLine" />
+                                    </div>
 
-                                <div>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Insert" Text="Posta" />
-                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Cancel" Text="Rensa" />
+                                    <div>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Insert" Text="Posta" class="btn btn-default"/>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Cancel" Text="Rensa" class="btn btn-default"/>
+                                    </div>
                                 </div>
-
                             </InsertItemTemplate>
                         </asp:FormView>
                     </LoggedInTemplate>
@@ -72,39 +77,38 @@
                     <%-- --%>
                     <LoggedInTemplate>
 
+                        <div class="new-blog-content">
+                            <h2>Alla dina inlägg</h2>
+                        </div>
+
                         <asp:ListView ID="ListView1" runat="server"
                             ItemType="IDV430.Model.Blog"
-                            SelectMethod="GetmyListView_GetData"
-                            >
+                            SelectMethod="GetmyListView_GetData">
 
                             <LayoutTemplate>
                                 <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                                
                             </LayoutTemplate>                            
 
                             <ItemTemplate>
-                                <div class="Frame add well well-lg">
+                                <div class="my-blog-list">
                                     <%-- HeadLine --%>
                                     <div>                                    
                                         <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
-                                    </div>
+                                    
                                     <%-- datum - UserNamn --%>
-                                    <div>
+                                   
                                         <p>Datum <%#: Item.Date.ToString("d") %> </p>                          
                                     </div>
-                                </div>                            
-
-
+                                </div> 
                             </ItemTemplate>
-                            
-
 
                             <EmptyDataTemplate>
                                 <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
                                       <h3>Det finns inga annonser.</h3> 
                             </EmptyDataTemplate>
-
-                        </asp:ListView>
-                        
+                        </asp:ListView> 
+                        <div class="margin-bottom-blog"></div>                      
                     </LoggedInTemplate>
                 </asp:LoginView> 
 </asp:Content>

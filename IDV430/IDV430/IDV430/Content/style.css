@@ -10,6 +10,7 @@
         Blå         #445878
         Turkos      #92CDCF
         Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
 */
 
 .fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened {
@@ -32,11 +33,12 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
+
 }
 .middle-text h1 {
      font-size:50px;
     font-weight:900;
-    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -44,6 +46,7 @@
     font-size:20px;
     margin-top:20px;
     margin-bottom: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -116,12 +119,6 @@ margin-right:30px;
     
 }
 
-#OmyRoom {
-    background-color:rgb(216, 249, 255);
-    padding-bottom: 50px;
-    padding-top: 30px;
-}
-
 
 #photoBetween {
     background-image: url('../Pics/night.JPG');
@@ -129,14 +126,55 @@ margin-right:30px;
 }
 
 
+/*thegallery slide*/
+#theGallery {
+
+    color:#EEEFF7;
+    height:400px;
+    background-color:#445878;
+}
+.image-inner {    
+    margin-left: auto;
+    margin-right: auto;
+}
+/*OmyRoom*/
+#OmyRoom {
+    color:#1C1D21;
+    background-color:#92CDCF;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+/*theBlogg*/
 #theBlogg {
+    color:#1C1D21;
     height:400px;
     background-color:darkorange;
+    font-size:150%;
 }
-#theGallery {
-    height:400px;
-    background-color:blueviolet;
+/*Footer*/
+.footer {
+    background-color:#EEEFF7;
+    padding-bottom:20px;
+
+    
+    border-top: solid 0.1em;
+    border-top-color: #BDBEC4;
 }
+
+
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+*/
+
+
+
 /* JavaScript lägger till denna och tar bort när man scrollar för menyn ska fälja med
 .fixed {
     position:fixed;
@@ -151,16 +189,72 @@ margin-right:30px;
 
 } */
 
+    /*Skriva blogg sidan*/
+.new-blog-headline{
+ margin-top: 100px;
+ margin-left: 30px;
+}
+.new-blog-content{
+ margin-top: 30px;
+ margin-left: 30px;
+}
+
+
+.blog-form {
+   
+    margin-left: 50px;
+}
+.blog-form div {
+    
+}
+
+.BlogName {
+    width: 200%;
+    
+}
+
+.BlogContent {
+    width: 300%;
+    height: 200px;
+}
+
+.my-blog-list {
+    margin-left: 50px;
+    margin-right:50px;
+    border-bottom: solid 0.2em;
+    border-bottom-color: #31353D;
+    width: auto;
+
+}
+
+.margin-bottom-blog {
+    margin-bottom:40px;
+}
+
+.list-blog-content {
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-bottom:60px;
+}
+
+
+    /*Inloggad meny!!!*/
+
 .fixedBlack {
     position:fixed;
-    background-color: #35353D;
+    background-color: #31353D;
     z-index:77;
     left: 0;
     top: 0;
     width: 100%;
     padding-bottom: 10px;
-       
+    border-radius: 0 !important;       
 }
+a.hover:hover {
+    color:white;
+}
+
 
 
 .add{
@@ -183,14 +277,19 @@ margin-right:30px;
    
 }
 
+/*Login / Registrera sig*/
+.login-register {
+    Width: 50%;
+    margin-left:auto;
+    margin-right:auto;
 
+}
 
+/*Redigera blog*/
 
-
-
-
-
-
+.edit-blog {
+    margin-top:100px;
+}
 
 
 

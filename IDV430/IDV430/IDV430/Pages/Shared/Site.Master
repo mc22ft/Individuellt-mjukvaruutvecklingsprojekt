@@ -123,7 +123,64 @@
 
 
         </main>
+         <!-- Footer
+    ================================================== -->
+         <footer id="Kontakt" class="footer">
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-sm-3 col-md-3">
+                            <div class="footer-logo">
+                                <h2>myRoom</h2>
+                                <p>
+                                    Hammarby Allé 132, 12066 Stockholm<br>
+                                    +46 0736900308
+                                </p>
+                                <br>
+                                <p class="muted">© 2014 myRoom AB.</p>
+                                <a href="#">Användarvilkor</a>
+                                <a href="#">Sekretess </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <h3>Produkter</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Produkt för iOS</a></li>
+                                <li><a href="#">Produkt för Android</a></li>
+                                <li><a href="#">Produkt för Windows</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <h3>Företaget</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Om oss</a></li>
+                                <li><a href="#">Vårat team</a></li>
+                                <li><a href="#">Jobb&emsp;<span class="label label-info">Sök nu!</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <h3>Media</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">                        
+                        <a class="icon" href="http://www.twitter.com" target="_blank"><img src="../../Content/icon/twitter-icon.png" /></a>                        
+                        <a class="icon" href="http://www.google.com" target="_blank"><img src="../../Content/icon/google-icon.png" /></a>
+                        <a class="icon" href="http://www.facebook.com" target="_blank"><img src="../../Content/icon/facebook-icon.png" /></a>
+                        <a class="icon" href="http://www.flickr.com" target="_blank"><img src="../../Content/icon/flickr-icon.png" /></a>
+                        <a class="icon" href="http://www.youtube.com" target="_blank"><img src="../../Content/icon/youtube-icon.png" /></a>
+                    </div>
+                </div>       
+            </div>
+
+        </footer>
         
 
     </form>

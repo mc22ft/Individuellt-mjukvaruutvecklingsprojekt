@@ -24,6 +24,10 @@
                     <%-- --%>
                     <LoggedInTemplate>
 
+                        <div class="list-blog-content">
+                            <h1>Alla senaste inläggen</h1>
+                        </div>
+
                         <asp:ListView ID="ListView1" runat="server"
                             ItemType="IDV430.Model.Blog"
                             SelectMethod="ListBlogPost_GetData"
@@ -35,14 +39,14 @@
                             
 
                             <ItemTemplate>
-                                <div class="Frame add well well-lg">
+                                <div class="my-blog-list">
                                     <%-- HeadLine --%>
                                     <div>                                    
                                         <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
-                                    </div>
+                                    
 
                                     <%-- datum - UserNamn --%>
-                                    <div>
+                                    
                                         <p><%#: Item.Date.ToString("d") %> Skrivet av: <%#: Item.UserID %></p>                          
                                     </div>
 
@@ -65,7 +69,7 @@
                             </EmptyDataTemplate>
 
                         </asp:ListView>
-                        
+                        <div class="margin-bottom-blog"></div>
                     </LoggedInTemplate>
                 </asp:LoginView> 
 

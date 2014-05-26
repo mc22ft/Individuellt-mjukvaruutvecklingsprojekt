@@ -26,6 +26,64 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="UnderMain1" runat="server">
 
+
+     <!-- thegallery
+    ================================================== -->
+            <section id="theGallery">
+                <div class="container">
+
+                    <h2>theGallery</h2>
+
+
+                    <%--  --%>
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:300px;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img class="image-inner" src="../../Pics/boat.JPG" alt="First slide" style="height:300px;" />                             
+                             <div class="carousel-caption">
+                                 <h1>This Caption 1</h1>
+                                 <p>Här kommer text</p>
+                             </div>
+                          </div>
+                          <div class="item">
+                            <img class="image-inner" src="../../Pics/night.JPG" alt="Second slide" style="height:300px;"/>
+                             <div class="carousel-caption">
+                                 <h1>This Caption 2</h1>
+                                 <p>Här kommer text</p>
+                             </div>                             
+                          </div>
+                          <div class="item">
+                            <img class="image-inner" src="../../Pics/test1.png" alt="Third slide" style="height:300px;"/>
+                             <div class="carousel-caption">
+                                 <h1>This Caption 3</h1>
+                                 <p>Här kommer text</p>
+                             </div>
+                          </div>
+                       </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                    <%--  --%>
+
+                   
+                </div>
+            </section>
+
+
     <!-- Om my room
     ================================================== -->
    <section id="OmyRoom" class="content text-center light">
@@ -72,85 +130,36 @@
 
             </div>
 
+             
+
+
+
                    <!-- theblogg
     ================================================== -->
-            <section id="theBlogg">
+            <section id="theBlogg" style="background-image: url('../../Pics/article-writing-pencil-small-1.jpg'); background-size: cover ; height: 600px; height: 400px;">
                 <div class="container">
                     <h2>theBlogg</h2>
+                    <p>Dela dina händelser och upplevelser</p>
+                    <p>Roligt - Tråkigt - Glad - Ledsen - Arg - Snäll - Trevligt - Tråkigt</p>
+                    <p>Alla dina närmaste är intresserade om dig!</p>
                 </div>
             </section>
 
-            <!-- thegallery
-    ================================================== -->
-            <section id="theGallery">
-                <div class="container">
-                    <h2>theGallery</h2>
-                </div>
-            </section>
+    <script type="text/javascript">
 
+        //$('.carousel').carousel()
+        $('.carousel-example-generic').carousel({
+            interval: 2000
+        })
+
+</script>
 </asp:Content>
 
 <%-- FOOTER --%>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderMain2" runat="server">
 
-    <!-- Footer
-    ================================================== -->
-        <footer id="Kontakt" class="footer">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-sm-3 col-md-3">
-                            <div class="footer-logo">
-                                <h2>Prestige</h2>
-                                <p>
-                                    1024 Main Street, Vancouver BC<br>
-                                    +1 (123) 456-7890
-                                </p>
-                                <br>
-                                <p class="muted">© 2013 Prestige Inc.</p>
-                                <a href="#">Terms of Service</a>
-                                <a href="#">Privacy</a>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-md-3">
-                            <h3>Product</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Product for iOS</a></li>
-                                <li><a href="#">Product for Android</a></li>
-                                <li><a href="#">Product for Windows</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-3 col-md-3">
-                            <h3>Company</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Jobs&emsp;<span class="label label-info">We're hiring!</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-3 col-md-3">
-                            <h3>Documentation</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Product Help</a></li>
-                                <li><a href="#">Developer API</a></li>
-                                <li><a href="#">Product Markdown</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <a class="icon" href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a class="icon" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a class="icon" href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
-                        <a class="icon" href="http://www.workingnomads.co" target="_blank"><i class="fa fa-globe"></i></a>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+   
 
 
 </asp:Content>

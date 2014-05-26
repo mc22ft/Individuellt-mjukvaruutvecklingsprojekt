@@ -23,7 +23,7 @@
 
 <asp:Content ID="LogInId" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-    <h3>Logga in här!!!</h3>
+    
 
     <asp:PlaceHolder runat="server" ID="phLoginStatus" Visible="false">
         <h1>Nu är du inloggad!</h1>
@@ -40,7 +40,10 @@
 
 
     <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
-        <div id="formid" class="form-group">
+        <div id="formid" class="form-group login-register">
+            
+            <h3>Logga in här</h3>
+
             <div style="margin-bottom: 10px">
                 <asp:Label runat="server" AssociatedControlID="UserName">Användarnamn</asp:Label>
                 <div>

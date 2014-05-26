@@ -16,9 +16,9 @@
 
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
 
-        <div id="formid" class="form-group">
+        <div id="formid" class="form-group login-register">
 
-            <h4>Register a new user</h4>
+            <h3>Registrera ny användare</h3>
             
             <p>
                 <asp:Literal runat="server" ID="StatusMessage" />
@@ -44,7 +44,7 @@
             </div>
             <div>
                 <div>
-                    <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" class="btn btn-default"/>
+                    <asp:Button runat="server" OnClick="CreateUser_Click" Text="Registrera" class="btn btn-default"/>
                 </div>
             </div>
         </div>

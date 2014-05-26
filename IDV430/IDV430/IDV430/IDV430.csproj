@@ -151,7 +151,10 @@
     <Content Include="Pages\User\UserEditBlog.aspx" />
     <Content Include="Pages\User\UserMainPage.aspx" />
     <Content Include="Pages\User\UserOneBlogPage.aspx" />
+    <Content Include="Pics\article-writing-pencil-small-1.jpg" />
+    <Content Include="Pics\article-writing-pencil-small.jpg" />
     <Content Include="Pics\background.JPG" />
+    <Content Include="Pics\background_fix1.png" />
     <Content Include="Pics\boat.JPG" />
     <Content Include="Content\icon\My-Picture-old-school-icon.png" />
     <Content Include="Pics\night.JPG" />
