@@ -190,6 +190,7 @@ margin-right:30px;
 } */
 
     /*Skriva blogg sidan*/
+
 .new-blog-headline{
  margin-top: 100px;
  margin-left: 30px;
@@ -205,7 +206,12 @@ margin-right:30px;
     margin-left: 50px;
 }
 .blog-form div {
-    
+   
+}
+
+.blog-form-under {
+    border-bottom: 1px solid #1C1D21;
+    width: 1000%;
 }
 
 .BlogName {
@@ -288,7 +294,39 @@ a.hover:hover {
 /*Redigera blog*/
 
 .edit-blog {
-    margin-top:100px;
+    margin-top:120px;
+    height:400px;
+    margin-bottom:110px;
+}
+
+.edit-blog1 {
+    margin-top:120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom:110px;
+}
+
+.readBlogPost {
+    margin-left: 10%;
+    margin-right: 0;
+    width: 80%;
+}
+
+.readContent {
+    Width:60%;
+    Height:250px;
+}
+
+
+.editHeadLine {
+    margin-bottom: 15px;
+}
+
+.emptyPost {
+    margin-left:11%
+}
+
+.footer {
 }
 
 

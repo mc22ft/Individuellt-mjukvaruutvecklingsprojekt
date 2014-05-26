@@ -13,6 +13,15 @@ namespace IDV430.Pages.User {
     public partial class GalleryPage {
         
         /// <summary>
+        /// MenuLoggedIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::IDV430.Pages.Shared.MenuLoggedIn MenuLoggedIn;
+        
+        /// <summary>
         /// FileUploadText control.
         /// </summary>
         /// <remarks>

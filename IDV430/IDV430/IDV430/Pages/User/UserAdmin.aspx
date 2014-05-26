@@ -59,6 +59,7 @@
                                         <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Cancel" Text="Rensa" class="btn btn-default"/>
                                     </div>
                                 </div>
+                                <div class="blog-form-under"></div>
                             </InsertItemTemplate>
                         </asp:FormView>
                     </LoggedInTemplate>

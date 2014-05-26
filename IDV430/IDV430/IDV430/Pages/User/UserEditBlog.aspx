@@ -17,11 +17,11 @@
 
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server" >
 
     <asp:FormView ID="FormView2" runat="server"
                 ItemType="IDV430.Model.Blog"
-                SelectMethod="GetOneBlogPostEdit_GetItem"                
+                SelectMethod="GetOneBlogPostEdit_GetItem" class="readBlogPost"      
                 >
 
                 <ItemTemplate>
@@ -37,7 +37,7 @@
                         </div>
 
                         <%-- Content i blog --%>
-                        <div>
+                        <div class="readContent">
                             <p><%#: Item.Content %></p>
                           <%--  <asp:TextBox ID="TextBox1" runat="server" Text='<%#: Item.Content %>' Visible="false"></asp:TextBox>--%>
                         </div>  
@@ -85,27 +85,29 @@
                 DefaultMode="Edit"
                 RenderOuterTable="false"
                 SelectMethod="GetOneBlogPostEdit_GetItem"
-                UpdateMethod="BlogEditFormView_UpdateItem"
+                UpdateMethod="BlogEditFormView_UpdateItem" 
                 >
 
                 <EditItemTemplate>
                     <%-- HeadLine --%>
-                    <div class="Frame add well well-lg edit-blog">
-                        <div>            
-                            <asp:Label ID="Label2" runat="server" Text="Rubrik:"></asp:Label>               
-                            <asp:TextBox ID="TestBox" runat="server" Text='<%# BindItem.HeadLine %>'></asp:TextBox>         
-                          <h1></h1>
+                    <div class="Frame add well well-lg edit-blog edit-blog1">
+                        <div>
+                            <h1>Redigera ditt innehåll här</h1>
+                        </div>
+                        <div class="editHeadLine"> 
+                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>               
+                            <asp:TextBox ID="TestBox" runat="server" Text='<%# BindItem.HeadLine %>' Width="50%"></asp:TextBox>  
                         </div>
 
                         <%-- datum - UserNamn --%>
-                        <div>
+                        <div class="editHeadLine">
                             <p><%#: Item.Date.ToString("d") %> Skrivet av: <%#: Item.UserID %></p>   
                         </div>
 
                         <%-- Content i blog --%>
                         <div>
-                            <asp:Label ID="Label1" runat="server" Text="Innehåll:"></asp:Label>
-                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%# BindItem.Content %>'></asp:TextBox>
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%# BindItem.Content %>' Width="60%" Height="200px"></asp:TextBox>
                         </div>  
                                           
                         <div>
@@ -231,7 +233,7 @@
 
                 <EmptyDataTemplate>
                         <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
-                        <h3>Det finns inga kommentarer.</h3> 
+                        <p class="emptyPost">Det finns inga kommentarer till denna blogpost</p> 
                </EmptyDataTemplate>
 
             </asp:ListView>
