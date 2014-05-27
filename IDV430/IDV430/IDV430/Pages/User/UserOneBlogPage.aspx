@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Shared/Site.Master" AutoEventWireup="true" CodeBehind="UserOneBlogPage.aspx.cs" Inherits="IDV430.Pages.User.UserOneBlogPage" %>
 
+<%@ Register Src="~/Pages/Shared/MenuLoggedIn.ascx" TagPrefix="uc1" TagName="MenuLoggedIn" %>
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
 </asp:Content>
 
 
@@ -22,11 +26,11 @@
 
             <asp:FormView ID="FormView1" runat="server"
                 ItemType="IDV430.Model.Blog"
-                SelectMethod="GetOneBlogPost_GetItem">
+                SelectMethod="GetOneBlogPost_GetItem" class="readBlogPost">
 
                 <ItemTemplate>
                     <%-- HeadLine --%>
-                    <div class="Frame add well well-lg">
+                    <div class="Frame add well well-lg edit-blog">
                         <div>                                    
                           <h1><%#: Item.HeadLine %></h1>
                         </div>
@@ -37,7 +41,7 @@
                         </div>
 
                         <%-- Content i blog --%>
-                        <div>
+                        <div class="readContent">
                             <p><%#: Item.Content %></p>
                           <%--  <asp:TextBox ID="TextBox1" runat="server" Text='<%#: Item.Content %>' Visible="false"></asp:TextBox>--%>
                         </div>
@@ -107,32 +111,36 @@
                 RenderOuterTables="false">
 
                     <InsertItemTemplate>
-                        <div class="Frame add well well-lg">
+                        <div class="make-comment-Blog">
                             <div>
                                 <h3>Kommentera detta inlägg!</h3>
                             </div>
-                            <div>          
-                                <div>
-                                    <asp:Label ID="Label2" runat="server" Text="Namn:"></asp:Label>
-                                    <asp:TextBox ID="CommentName" runat="server" Text='<%#: BindItem.Name %>' />
+                            <div class="comment-Blog-content">     
+                                <div class="comment-Blog-content-div1">     
+                                    <div>
+                                        <asp:Label ID="Label2" runat="server" Text="Namn:"></asp:Label>
+                                        <asp:TextBox ID="CommentName" runat="server" Text='<%#: BindItem.Name %>' />
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label3" runat="server" Text="Epost:"></asp:Label>
+                                        <asp:TextBox ID="CommentEpost" runat="server" Text='<%#: BindItem.Epost %>' />
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label4" runat="server" Text="www:"  class="comment-Blog-content-div1-3"></asp:Label>
+                                        <asp:TextBox ID="CommentWebbPage" runat="server" Text='<%#: BindItem.Webbpage %>' />
+                                    </div>
                                 </div>
-                                <div>
-                                    <asp:Label ID="Label3" runat="server" Text="Epost:"></asp:Label>
-                                    <asp:TextBox ID="CommentEpost" runat="server" Text='<%#: BindItem.Epost %>' />
+                                <div class="comment-Blog-content-div2">
+                                    <div>
+                                        <asp:Label ID="Label5" runat="server" Text="Kommentar:"></asp:Label>
+                                        <asp:TextBox ID="CommentCommentTxt" runat="server" TextMode="MultiLine" Text='<%#: BindItem.CommentTxt %>' class="comment-Blog-content-div2-txtbox"/>
+                                    </div>
                                 </div>
-                                <div>
-                                    <asp:Label ID="Label4" runat="server" Text="Webbpage:"></asp:Label>
-                                    <asp:TextBox ID="CommentWebbPage" runat="server" Text='<%#: BindItem.Webbpage %>' />
-                                </div>
-                                <div>
-                                    <asp:Label ID="Label5" runat="server" Text="Kommentar:"></asp:Label>
-                                    <asp:TextBox ID="CommentCommentTxt" runat="server" TextMode="MultiLine" Text='<%#: BindItem.CommentTxt %>' />
-                                </div>
-                                <div>
+                            </div>
+                                <div class="make-comment-Blog-bottom">
                                     <asp:LinkButton ID="CommentLinkButton1" runat="server" Visible="True" CommandName="Insert" Text="Posta" />
                                     <asp:LinkButton ID="CommentLinkButton2" runat="server" Visible="True" CommandName="Cancel" Text="Rensa" />
                                 </div>
-                            </div>
                         </div>
                     </InsertItemTemplate>
 
@@ -161,7 +169,7 @@
                 >
 
                 <ItemTemplate>
-                    <div class="Frame add well well-lg">
+                    <div class="comment-Blog">
                         <%-- Name --%><%-- datum --%>
                         <div>
                                                                 
@@ -171,19 +179,23 @@
 
                         <%-- Epost --%>
                         <div>                            
-                            <p>Kontakt: <%#: Item.Epost %> </p>
+                            <%--<p>Kontakt: <%#: Item.Epost %> </p>--%>
                         </div>
 
                         <%-- Hemsida --%>
                         <div>
-                            <p>Hemsida: <%#: Item.Webbpage %> </p>
+                            <%--<p>Hemsida: <%#: Item.Webbpage %> </p>--%>
                         </div>
 
                         <%-- Kommentar i blog --%>
-                        <div>
+                        <div class="comment-Blog-content">
                             <p><%#: Item.CommentTxt %></p>
                         </div>
-                    
+                        
+                        <div class="comment-Blog-bottom">                           
+                            <p><asp:HyperLink ID="HyperLink1" runat="server" Url="<%#: Item.Webbpage %>">Hemsida:  <%#: Item.Webbpage %></asp:HyperLink></p>
+                            <p><asp:HyperLink ID="HyperLink2" runat="server" Url="<%#: Item.Epost %>">Kontakt:  <%#: Item.Epost %></asp:HyperLink></p>                               
+                        </div>
                        
                     </div>
 
@@ -193,7 +205,7 @@
 
                 <EmptyDataTemplate>
                         <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
-                        <h3>Det finns inga kommentarer.</h3> 
+                        <p class="emptyPost">Det finns inga kommentarer till denna blogpost</p> 
                </EmptyDataTemplate>
 
             </asp:ListView>

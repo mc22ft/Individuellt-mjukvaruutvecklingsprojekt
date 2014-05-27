@@ -157,11 +157,14 @@
     <Content Include="Pics\background_fix1.png" />
     <Content Include="Pics\boat.JPG" />
     <Content Include="Content\icon\My-Picture-old-school-icon.png" />
+    <Content Include="Pics\bungee-jumping.jpg" />
     <Content Include="Pics\night.JPG" />
     <Content Include="Pics\test1.png" />
     <Content Include="Pics\testBild.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\SketchRockwell-Bold.ttf" />
+    <Content Include="Content\CRICKET_.TTF" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
@@ -297,6 +300,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\fancybox\" />
     <Folder Include="Content\Files\" />
+    <Folder Include="Content\Font\" />
     <Folder Include="Content\ThumImage\" />
     <Folder Include="Data\Images\" />
     <Folder Include="users\" />

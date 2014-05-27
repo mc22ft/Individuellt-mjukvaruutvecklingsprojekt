@@ -105,9 +105,9 @@
                         </div>
 
                         <%-- Content i blog --%>
-                        <div>
+                        <div class="readEditContent">
                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%# BindItem.Content %>' Width="60%" Height="200px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%# BindItem.Content %>' Width="60%" Height="200px" ></asp:TextBox>
                         </div>  
                                           
                         <div>
@@ -172,39 +172,43 @@
                 >
 
                 <ItemTemplate>
-                    <div class="Frame add well well-lg">
+                    <div class="comment-Blog">
                         <%-- Name --%><%-- datum --%>
                         <div>
                                                                 
                           <h4>Kommentarat av <%#: Item.Name %> <%#: Item.Date.ToString("d") %> </h4>
-                        </div>
-
-
-                        <%-- Epost --%>
-                        <div>                            
-                            <p>Kontakt: <%#: Item.Epost %> </p>
-                        </div>
+                        </div>                        
 
                         <%-- Hemsida --%>
                         <div>
-                            <p>Hemsida: <%#: Item.Webbpage %> </p>
+                            
                         </div>
 
                         <%-- Kommentar i blog --%>
-                        <div>
-                            <p><%#: Item.CommentID  %></p>
+                        <div class="comment-Blog-content">
+                            <p><%#: Item.CommentTxt  %></p>
+                        </div>
+
+                        <%-- Epost --%>
+                        <div>                            
+                            <%--<p>Kontakt: <%#: Item.Epost %> </p>--%>
                         </div>
                     
                         <%--  NavigateUrl='<%# GetRouteUrl("UserEditBlog", new { id = Item.PostBlogID  }) %>' --%>
-                        <div> 
+                        <div class="comment-Blog-bottom">
 
-
-                            <asp:LinkButton runat="server" ID="DeleteCommentLinkButton" Text="Ta bort" class="btn btn-danger btn-xs"
+                            <asp:LinkButton runat="server" ID="DeleteCommentLinkButton" Text="Ta bort" class="delite-button"
                                 CausesValidation="false" 
                                 OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("Name")) %>'
                                 OnCommand="DeleteCommentLinkButton_Command"   
                                 CommandArgument='<%# Item.CommentID %>'
                                 />
+
+                            <p><asp:HyperLink ID="HyperLink1" runat="server" Url="<%#: Item.Webbpage %>"><%#: Item.Webbpage %></asp:HyperLink></p>
+                            
+                            
+
+
                     <%-- 
                         CommandArgument='<%$ RouteValue:id %>'
                         

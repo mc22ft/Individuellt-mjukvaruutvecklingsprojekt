@@ -54,7 +54,10 @@
                                     <div>
                                         <p><%#: Item.Content %></p>
                                     </div>
-
+                                    <div>
+                                        <asp:HyperLink ID="HyperLink2" runat="server" Text="Kommentera" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' class="btn btn-primary btn-xs comment-button" />
+                                        
+                                    </div>
                                 </div>
                                
 

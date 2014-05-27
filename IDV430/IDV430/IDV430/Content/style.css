@@ -8,6 +8,7 @@
         Svart       #1C1D21
         Grå         #31353D
         Blå         #445878
+        Ljusblå     #90BBFF
         Turkos      #92CDCF
         Vit/LjusGrå #EEEFF7
         Mörk grå    #BDBEC4
@@ -129,14 +130,29 @@ margin-right:30px;
 /*thegallery slide*/
 #theGallery {
 
-    color:#EEEFF7;
+    color:#1C1D21;
     height:400px;
-    background-color:#445878;
+    background-color:#EEEFF7;
+    font-size:150%;
+    border-bottom: 1px solid #1C1D21;
+    border-top: 1px solid #1C1D21;
 }
 .image-inner {    
     margin-left: auto;
     margin-right: auto;
 }
+
+.slide {
+    width: 100%;    
+}
+
+.carousel-indicators {
+    margin-bottom: -20px;
+}
+.carousel-caption{
+    margin-bottom: -25px;
+}
+
 /*OmyRoom*/
 #OmyRoom {
     color:#1C1D21;
@@ -145,12 +161,44 @@ margin-right:30px;
     padding-top: 30px;
 }
 /*theBlogg*/
-#theBlogg {
+#theBlogg { 
     color:#1C1D21;
     height:400px;
     background-color:darkorange;
     font-size:150%;
+    border-bottom: 1px solid #1C1D21;   
+    border-top: 1px solid #1C1D21;
 }
+
+/*theBlogg -- Fonts*/
+
+@font-face { 
+    font-family: customfont; src: url(SketchRockwell-Bold.ttf); 
+}
+@font-face { 
+    font-family: customfont-p; src: url(CRICKET_.TTF); 
+}
+.customfont {
+    margin: 0;
+    font-family: "customfont", Verdana, Tahoma;
+    
+}
+.customfont-p {
+    margin-top: 30px;
+    font-family: "customfont-p", Verdana, Tahoma;
+    font-size: 170%;
+    font-weight: bold;
+    
+}
+
+.font-p-div {
+    height: 355px;
+    overflow: hidden;
+}
+
+
+
+
 /*Footer*/
 .footer {
     background-color:#EEEFF7;
@@ -168,6 +216,7 @@ margin-right:30px;
         Svart       #1C1D21
         Grå         #31353D
         Blå         #445878
+        Ljusblå     #90BBFF
         Turkos      #92CDCF
         Vit/LjusGrå #EEEFF7
         Mörk grå    #BDBEC4
@@ -225,13 +274,35 @@ margin-right:30px;
 }
 
 .my-blog-list {
+    margin-top:50px;
     margin-left: 50px;
     margin-right:50px;
-    border-bottom: solid 0.2em;
-    border-bottom-color: #31353D;
+    border-bottom: solid 0.1em;
+    border-bottom-color: #BDBEC4;
     width: auto;
+    
 
 }
+.my-blog-list div {
+    margin-left: 8%;
+}
+.comment-button {
+    margin-bottom: 10px;
+}
+
+
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF    
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+        
+*/
 
 .margin-bottom-blog {
     margin-bottom:40px;
@@ -295,8 +366,9 @@ a.hover:hover {
 
 .edit-blog {
     margin-top:120px;
-    height:400px;
+    /*height:400px;*/
     margin-bottom:110px;
+    background-color: #90BBFF;
 }
 
 .edit-blog1 {
@@ -310,26 +382,133 @@ a.hover:hover {
     margin-left: 10%;
     margin-right: 0;
     width: 80%;
+    margin-bottom: -80px;
+}
+.readBlogPost-comment{
+    margin-left: 10%;
+    margin-right: 0;
+    width: 80%;
+    margin-bottom: -80px;
 }
 
 .readContent {
-    Width:60%;
+    Width:100%;
     Height:250px;
+    margin-bottom: 20px;
+    overflow: auto;
 }
-
+.readEditContent {
+    Width:100%;
+    Height:240px;
+    margin-bottom: -15px;
+    border-radius: 5px;
+    overflow: auto;    
+}
 
 .editHeadLine {
     margin-bottom: 15px;
+    
 }
 
 .emptyPost {
-    margin-left:11%
+    margin-left:11%;
+    margin-top:60px;
+}
+
+/*Kommentarer*/
+
+.comment-Blog {
+    border: 1px solid #BDBEC4;
+    margin-left: 15%;
+    margin-right: 0;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.comment-Blog h4 {
+    background-color:#BDBEC4;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0;
+    padding-left:10px;
+}
+.comment-Blog-content {
+    margin-left:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.comment-Blog-bottom {
+    background-color: #EEEFF7;
+    border-top: 1px solid #BDBEC4;
+}
+.comment-Blog-bottom p {
+    margin: 0;
+    /*width: 10%;*/
+    padding: 2px;
+    margin-left:4px;
+}
+.make-comment-Blog-bottom {
+    margin: 0;
+    width: 100%;
+    padding: 2px;
+    background-color: #EEEFF7;
+    border-top: 1px solid #BDBEC4;
+    margin-top:30px;
+}
+.comment-Blog-content-div1 {
+    float:left;
+}
+.comment-Blog-content-div1 div {
+    margin-bottom: 5px;
+}
+.comment-Blog-content-div1-3 {
+    margin-right: 10px;
+}
+.comment-Blog-content-div2{
+    margin-left: 40%;
+}
+.comment-Blog-content-div2-txtbox {
+   height: 90px;
+width: 75%;
+}
+
+.make-comment-Blog {
+    border: 1px solid #BDBEC4;
+    margin-left: 48%;
+    margin-right: 0;
+    width: 250%;
+    margin-bottom: 30px;
+}
+.make-comment-Blog h3 {
+    background-color:#BDBEC4;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0;
+    padding-left:10px;
+}
+.delite-button {
+    color:#1C1D21;
+    background-color:#d9534f;
+    padding: 2px;
+    text-decoration:none;
+    float: right;
 }
 
 .footer {
 }
 
+/*
+    Färger som jag använder
 
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF    
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+
+        Röd         #d9534f
+*/
 
 
 

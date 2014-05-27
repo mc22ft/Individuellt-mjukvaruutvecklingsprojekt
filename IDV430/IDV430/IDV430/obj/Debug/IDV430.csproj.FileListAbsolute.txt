@@ -67,6 +67,6 @@ C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\Micr
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\Microsoft.Owin.Security.OAuth.xml
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\Newtonsoft.Json.xml
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\bin\System.Web.Optimization.xml
-C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.csprojResolveAssemblyReference.cache
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.dll
 C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.pdb
+C:\001 Git\Individuellt-mjukvaruutvecklingsprojekt\IDV430\IDV430\IDV430\obj\Debug\IDV430.csprojResolveAssemblyReference.cache

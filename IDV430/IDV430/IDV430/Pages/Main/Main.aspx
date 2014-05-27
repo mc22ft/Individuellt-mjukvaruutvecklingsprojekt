@@ -33,7 +33,7 @@
                 <div class="container">
 
                     <h2>theGallery</h2>
-
+                    
 
                     <%--  --%>
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:300px;">
@@ -49,22 +49,22 @@
                           <div class="item active">
                             <img class="image-inner" src="../../Pics/boat.JPG" alt="First slide" style="height:300px;" />                             
                              <div class="carousel-caption">
-                                 <h1>This Caption 1</h1>
-                                 <p>Här kommer text</p>
+                                 <h1>Semester</h1>
+                                 <%--<p>Här kommer text</p>--%>
                              </div>
                           </div>
                           <div class="item">
                             <img class="image-inner" src="../../Pics/night.JPG" alt="Second slide" style="height:300px;"/>
                              <div class="carousel-caption">
-                                 <h1>This Caption 2</h1>
-                                 <p>Här kommer text</p>
+                                 <h1>Familjen</h1>
+                                 <%--<p>Här kommer text</p>--%>
                              </div>                             
                           </div>
                           <div class="item">
-                            <img class="image-inner" src="../../Pics/test1.png" alt="Third slide" style="height:300px;"/>
+                            <img class="image-inner" src="../../Pics/bungee-jumping.jpg" alt="Third slide" style="height:300px;"/>
                              <div class="carousel-caption">
-                                 <h1>This Caption 3</h1>
-                                 <p>Här kommer text</p>
+                                 <h1>Upplevelser</h1>
+                                 <%--<p>Här kommer text</p>--%>
                              </div>
                           </div>
                        </div>
@@ -79,8 +79,9 @@
                     </div>
                     <%--  --%>
 
-                   
+                  
                 </div>
+
             </section>
 
 
@@ -138,10 +139,13 @@
     ================================================== -->
             <section id="theBlogg" style="background-image: url('../../Pics/article-writing-pencil-small-1.jpg'); background-size: cover ; height: 600px; height: 400px;">
                 <div class="container">
-                    <h2>theBlogg</h2>
-                    <p>Dela dina händelser och upplevelser</p>
-                    <p>Roligt - Tråkigt - Glad - Ledsen - Arg - Snäll - Trevligt - Tråkigt</p>
-                    <p>Alla dina närmaste är intresserade om dig!</p>
+                    
+                    <div class="font-p-div">
+                        <p class="customfont-p">Dela dina händelser och upplevelser</p>                    
+                        <p class="customfont-p">Alla dina närmaste är intresserade om dig!</p>
+                        <p class="customfont-p">Roligt - Glad - Ledsen - Arg - Trevligt</p>
+                    </div>
+                    <h2 class="customfont">theBlogg</h2>
                 </div>
             </section>
 
