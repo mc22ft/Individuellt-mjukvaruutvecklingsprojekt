@@ -28,7 +28,7 @@
     <asp:PlaceHolder runat="server" ID="phLoginStatus" Visible="false">
         <h1>Nu är du inloggad!</h1>
         <p>
-            <asp:Literal runat="server" ID="StatusText" />
+            <asp:Literal runat="server" ID="StatusText1" />
         </p>
         <a href="pages/gallery/Gallery.aspx">Gallery.aspx</a>
         <a href="admin/admin.aspx">admin.aspx</a>
@@ -43,6 +43,9 @@
         <div id="formid" class="form-group login-register">
             
             <h3>Logga in här</h3>
+            <p class="StatusField">
+                <asp:Literal runat="server" ID="StatusText"  />
+            </p>
 
             <div style="margin-bottom: 10px">
                 <asp:Label runat="server" AssociatedControlID="UserName">Användarnamn</asp:Label>

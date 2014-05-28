@@ -16,6 +16,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
+    <div class="ValidationSummary-div">
+                    <%-- Presenterar meddelande --%>
+            <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" /> 
+    </div>
+
+
+
     <asp:LoginView ID="LoginView1" runat="server">
 
         <%-- --%>
@@ -23,6 +30,9 @@
 
         <%-- --%>
         <LoggedInTemplate>
+
+
+
 
             <asp:FormView ID="FormView1" runat="server"
                 ItemType="IDV430.Model.Blog"
@@ -119,27 +129,68 @@
                                 <div class="comment-Blog-content-div1">     
                                     <div>
                                         <asp:Label ID="Label2" runat="server" Text="Namn:"></asp:Label>
-                                        <asp:TextBox ID="CommentName" runat="server" Text='<%#: BindItem.Name %>' />
+                                        <asp:TextBox ID="CommentName" runat="server" Text='<%#: BindItem.Name %>' MaxLength="30" />
+                                        <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator1" runat="server" 
+                                                        ControlToValidate="CommentName"
+                                                        Text="*"
+                                                        ErrorMessage="Du måste ange ett namn." 
+                                                        ForeColor="#CC0000" 
+                                                        Display="None" 
+                                                        SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
                                     </div>
                                     <div>
                                         <asp:Label ID="Label3" runat="server" Text="Epost:"></asp:Label>
-                                        <asp:TextBox ID="CommentEpost" runat="server" Text='<%#: BindItem.Epost %>' />
+                                        <asp:TextBox ID="CommentEpost" runat="server" Text='<%#: BindItem.Epost %>' MaxLength="50" />
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                                        ControlToValidate="CommentEpost"
+                                                        Text="*"
+                                                        ErrorMessage="Du måste ange en Epost." 
+                                                        ForeColor="#CC0000" 
+                                                        Display="None" 
+                                                        SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                                            ControlToValidate="CommentEpost" 
+                                            Text="*"
+                                            ErrorMessage="Fel format på din Epost." 
+                                            ForeColor="#CC0000" 
+                                            Display="None" 
+                                            SetFocusOnError="True" 
+                                            ValidationExpression="^[\w-]+(\.[\w-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$">
+                                        </asp:RegularExpressionValidator>
                                     </div>
                                     <div>
                                         <asp:Label ID="Label4" runat="server" Text="www:"  class="comment-Blog-content-div1-3"></asp:Label>
-                                        <asp:TextBox ID="CommentWebbPage" runat="server" Text='<%#: BindItem.Webbpage %>' />
+                                        <asp:TextBox ID="CommentWebbPage" runat="server" Text='<%#: BindItem.Webbpage %>' MaxLength="50" />
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                                                        ControlToValidate="CommentWebbPage"
+                                                        Text="*"
+                                                        ErrorMessage="Du måste ange en hemsida." 
+                                                        ForeColor="#CC0000" 
+                                                        Display="None" 
+                                                        SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                                 <div class="comment-Blog-content-div2">
                                     <div>
                                         <asp:Label ID="Label5" runat="server" Text="Kommentar:"></asp:Label>
-                                        <asp:TextBox ID="CommentCommentTxt" runat="server" TextMode="MultiLine" Text='<%#: BindItem.CommentTxt %>' class="comment-Blog-content-div2-txtbox"/>
+                                        <asp:TextBox ID="CommentCommentTxt" runat="server" TextMode="MultiLine" Text='<%#: BindItem.CommentTxt %>' class="comment-Blog-content-div2-txtbox" MaxLength="300" />
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                                                        ControlToValidate="CommentCommentTxt"
+                                                        Text="*"
+                                                        ErrorMessage="Du måste ange en kommentar." 
+                                                        ForeColor="#CC0000" 
+                                                        Display="None" 
+                                                        SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
                                     </div>
                                 </div>
                             </div>
                                 <div class="make-comment-Blog-bottom">
                                     <asp:LinkButton ID="CommentLinkButton1" runat="server" Visible="True" CommandName="Insert" Text="Posta" />
-                                    <asp:LinkButton ID="CommentLinkButton2" runat="server" Visible="True" CommandName="Cancel" Text="Rensa" />
+                                   <%-- <asp:LinkButton ID="CommentLinkButton2" runat="server" Visible="True" CommandName="Cancel" Text="Rensa" />--%>
                                 </div>
                         </div>
                     </InsertItemTemplate>
@@ -205,7 +256,7 @@
 
                 <EmptyDataTemplate>
                         <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
-                        <p class="emptyPost">Det finns inga kommentarer till denna blogpost</p> 
+                        <h3 class="no-blogpost">Det finns inga kommentarer till denna blogpost</h3> 
                </EmptyDataTemplate>
 
             </asp:ListView>

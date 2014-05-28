@@ -37,7 +37,8 @@
                                    else
                                    { %>
                                         <li><asp:HyperLink class="hidden-sm login" ID="myPage" runat="server" Text="MinSida" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li>                  
-                                        <li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>
+                                        <%--<li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>--%>
+                                        <li><asp:Button ID="LogOut" runat="server" OnClick="SignOut" Text="Logga ut" class="hidden-sm signout btn signupOutButton" /></li>
                                 <% } %>
                   
 

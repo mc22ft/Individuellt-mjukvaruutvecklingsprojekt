@@ -49,13 +49,13 @@ namespace IDV430.Pages.Shared {
         protected global::System.Web.UI.WebControls.HyperLink myPage;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// LogOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.Button LogOut;
         
         /// <summary>
         /// Register control.

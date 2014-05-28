@@ -21,7 +21,18 @@ namespace IDV430.Pages.UserMainPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+
+                }
+                else
+                {
+                    Response.RedirectToRoute("Default", null);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }
         }
 
         // The return type can be changed to IEnumerable, however to support

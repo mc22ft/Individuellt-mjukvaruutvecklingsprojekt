@@ -24,7 +24,11 @@
                     <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
                     <%-- --%>
                     <LoggedInTemplate>
-
+                    
+                        <div class="ValidationSummary-div">
+                                     <%-- Presenterar meddelande --%>
+                              <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" /> 
+                        </div>
                         <asp:FormView ID="FormView1" runat="server"
                             ItemType="IDV430.Model.Blog"
                             InsertMethod="CreateBlog_InsertItem"
@@ -43,18 +47,32 @@
                                     </div>
                         
                                     <div>
-                                        <asp:TextBox ID="BlogName" class="BlogName" runat="server" Text='<%# BindItem.HeadLine %>' />
+                                        <asp:TextBox ID="BlogName" class="BlogName" runat="server" Text='<%# BindItem.HeadLine %>' MaxLength="50" />
+                                        <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator" runat="server" 
+                                            ControlToValidate="BlogName"
+                                            Text="*"
+                                            ErrorMessage="Du måste ange en rubrik." 
+                                            ForeColor="#CC0000" 
+                                            Display="None" 
+                                            SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
                                     </div>
 
                                     <div>
                                         <label>Skriv innehållet:</label>
                                     </div>
-
-                                    <div>
                                         <asp:TextBox ID="BlogContent" class="BlogContent" runat="server" Text='<%# BindItem.Content %>' TextMode="MultiLine" />
+                                        <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator1" runat="server" 
+                                            ControlToValidate="BlogContent"
+                                            Text="*"
+                                            ErrorMessage="Du måste ange ett innehåll." 
+                                            ForeColor="#CC0000" 
+                                            Display="None" 
+                                            SetFocusOnError="True">
+                                        </asp:RequiredFieldValidator>
                                     </div>
 
-                                    <div>
+                                    <div class="blog-send-buttom">
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Insert" Text="Posta" class="btn btn-default"/>
                                         <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Cancel" Text="Rensa" class="btn btn-default"/>
                                     </div>
@@ -106,7 +124,7 @@
 
                             <EmptyDataTemplate>
                                 <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
-                                      <h3>Det finns inga annonser.</h3> 
+                                      <h3 class="no-blogpost">Du har inga blogposter.</h3> 
                             </EmptyDataTemplate>
                         </asp:ListView> 
                         <div class="margin-bottom-blog"></div>                      

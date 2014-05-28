@@ -32,9 +32,11 @@
 
                                 <li><asp:HyperLink ID="ContactUs" runat="server" Text="Kontakta oss" NavigateUrl='<%$ RouteUrl:routename = Contact %>' /></li>
 
-                                <li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" OnClick="SignOut" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>
+                                <%--<li><asp:Button class="hidden-sm signup btn signupOutButton" runat="server" OnClick="SignOut" Text="Log out" /></li>
 
-                               <%-- Boostrap meny!  <li><asp:Button ID="LogOut" runat="server" OnClick="SignOut" Text="Logga ut" class="hidden-sm signout btn signupOutButton" /></li>--%>
+                                <li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" OnClick="SignOut" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>--%>
+
+                                <li><asp:Button ID="LogOut" runat="server" OnClick="SignOut" Text="Logga ut" class="hidden-sm signout btn signupOutButton" /></li>
                                 
                             </ul>       
                         </div>

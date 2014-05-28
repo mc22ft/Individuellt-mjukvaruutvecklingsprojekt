@@ -19,6 +19,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server" >
 
+                    <%-- Presenterar meddelande --%>
+        <div class="ValidationSummary-div">                        
+                <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" /> 
+        </div>
+
+
     <asp:FormView ID="FormView2" runat="server"
                 ItemType="IDV430.Model.Blog"
                 SelectMethod="GetOneBlogPostEdit_GetItem" class="readBlogPost"      
@@ -96,7 +102,15 @@
                         </div>
                         <div class="editHeadLine"> 
                             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>               
-                            <asp:TextBox ID="TestBox" runat="server" Text='<%# BindItem.HeadLine %>' Width="50%"></asp:TextBox>  
+                            <asp:TextBox ID="TestBox" runat="server" Text='<%# BindItem.HeadLine %>' Width="50%" MaxLength="50"></asp:TextBox>  
+                            <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator1" runat="server" 
+                                            ControlToValidate="TestBox"
+                                            Text="*"
+                                            ErrorMessage="Du måste ange en rubrik." 
+                                            ForeColor="#CC0000" 
+                                            Display="None" 
+                                            SetFocusOnError="True">
+                            </asp:RequiredFieldValidator>
                         </div>
 
                         <%-- datum - UserNamn --%>
@@ -108,6 +122,14 @@
                         <div class="readEditContent">
                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                             <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%# BindItem.Content %>' Width="60%" Height="200px" ></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                            ControlToValidate="TextBox1"
+                                            Text="*"
+                                            ErrorMessage="Du måste ange ett innehåll." 
+                                            ForeColor="#CC0000" 
+                                            Display="None" 
+                                            SetFocusOnError="True">
+                            </asp:RequiredFieldValidator>
                         </div>  
                                           
                         <div>

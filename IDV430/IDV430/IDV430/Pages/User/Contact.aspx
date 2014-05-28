@@ -8,7 +8,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-    <div style="margin:200px; text-align:center;">
+    <div style="margin:200px; text-align:center; margin-bottom:450px;">
     
         <h2>Contact.aspx under konstruktion!</h2>
     </div>

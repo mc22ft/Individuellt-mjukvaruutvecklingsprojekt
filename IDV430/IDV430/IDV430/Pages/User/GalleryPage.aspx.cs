@@ -27,24 +27,20 @@ namespace IDV430.Pages.User
         {
             var QName = Request.QueryString["image"];
 
-
-            // Visar bild i större format 
-            if (QName != null)
-            {
-                ImageBig.ImageUrl = "~/Content/Files/" + QName;
-
-
-            }
-
             if (!IsPostBack)
             {
-                Gallery myGalleryObjekt = new Gallery();
-
-            }
+                if (User.Identity.IsAuthenticated)
+                {
+                    Gallery myGalleryObjekt = new Gallery();
+                }
+                else
+                {
+                    Response.RedirectToRoute("Default", null);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }   
         }
-
-
-
+        
         //Här kommer filen in...
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -79,32 +75,9 @@ namespace IDV430.Pages.User
 
         public IEnumerable<FileData> Repeater_GetData()
         {
-
-
             return Gallery.GetImagesNames();
-
-
-
-
-            ////Hämtar tumnagel bilderna från MIN katalog
-            //var getFileFromLabery = new DirectoryInfo(Server.MapPath(@"~/Content/ThumImage"));  //Här ska hämtas ur tumnagelbilderna 
-            //return (from fi in getFileFromLabery.GetFiles()
-            //       select new FileData
-            //       {
-            //           Name = fi.Name
-
-            //       }).AsEnumerable();
         }
-
-
-        //protected void Repeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        //{
-        //    //if.... mer...
-        //    var fileinfo = (FileInfo).e.item.DataItem;
-        //    var hyperlink = (HyperLink)e.Item.FindControl("myHyperLink");
-        //    hyperlink.N
-        //}
-
+        
         protected void Repeater_ItemDataBound1(object sender, RepeaterItemEventArgs e)
         {
 

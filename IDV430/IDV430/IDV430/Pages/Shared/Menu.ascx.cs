@@ -13,5 +13,11 @@ namespace IDV430.Pages.Shared
         {
 
         }
+        protected void SignOut(object sender, EventArgs e)
+        {
+            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            authenticationManager.SignOut();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }

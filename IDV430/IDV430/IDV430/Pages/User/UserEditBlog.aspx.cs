@@ -21,7 +21,19 @@ namespace IDV430.Pages.User
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            FormView1.Visible = false;
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    FormView1.Visible = false;
+                }
+                else
+                {
+                    Response.RedirectToRoute("Default", null);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }
+            
         }
 
         // The id parameter should match the DataKeyNames value set on the control

@@ -25,14 +25,18 @@ namespace IDV430.Pages.Blog
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    if (User.Identity.IsAuthenticated)
-            //    {
-            //        var userID = User.Identity.Name;                    
-            //    }
-            //}
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
 
+                }
+                else
+                {
+                    Response.RedirectToRoute("Default", null);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }
         }
 
         //

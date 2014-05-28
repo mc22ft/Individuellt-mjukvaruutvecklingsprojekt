@@ -20,7 +20,7 @@
 
             <h3>Registrera ny användare</h3>
             
-            <p>
+            <p class="StatusField">
                 <asp:Literal runat="server" ID="StatusMessage" />
             </p> 
                            

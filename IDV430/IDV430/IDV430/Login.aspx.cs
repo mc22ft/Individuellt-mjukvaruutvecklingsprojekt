@@ -34,6 +34,8 @@ namespace IDV430
                     LoginForm.Visible = true;
                 }
             }
+
+            
         }
 
         protected void SignIn(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace IDV430
             }
             else
             {
-                StatusText.Text = "Invalid username or password.";
+                StatusText.Text = "Fel användarnamn eller lösenord.";
                 LoginForm.Visible = true;
             }
         }

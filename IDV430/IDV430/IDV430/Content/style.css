@@ -92,7 +92,8 @@ margin-right:30px;
 }
 
 .signupOutButton {
-    background-color: #f0ad4e; 
+    background-color: #f0ad4e;
+    margin-top: 8px;
 }
 
 
@@ -241,7 +242,7 @@ margin-right:30px;
     /*Skriva blogg sidan*/
 
 .new-blog-headline{
- margin-top: 100px;
+ margin-top: 110px;
  margin-left: 30px;
 }
 .new-blog-content{
@@ -274,7 +275,7 @@ margin-right:30px;
 }
 
 .my-blog-list {
-    margin-top:50px;
+    /*margin-top:50px;*/
     margin-left: 50px;
     margin-right:50px;
     border-bottom: solid 0.1em;
@@ -468,7 +469,7 @@ a.hover:hover {
 }
 .comment-Blog-content-div2-txtbox {
    height: 90px;
-width: 75%;
+    width: 75%;
 }
 
 .make-comment-Blog {
@@ -510,11 +511,94 @@ width: 75%;
         Röd         #d9534f
 */
 
+ /*GALLERIET*/
+
+ .GalleryH2 {
+     margin-top: 100px;
+    text-align: center;
+ }
+
+ .mainGalleryWindow{
+    border: solid 1px #BDBEC4;
+    overflow: auto;
+    margin: 1% 5% 5% 5%;
+    height: 500px;
+ }
+
+ .imgContent {
+     float: left;
+ }
+
+ .imgContent img {
+     width:100%;
+ }
+
+ .Gallery-button {
+     /*margin-bottom: 5%;
+     margin-left: 5%;*/
+     margin: 5% 5% 2% 5%;
+     
+ }
+
+.gallery-fileupload-button {
+     margin-bottom:5px;
+ }
+
+.gallery-ok-message {
+    text-align:center;
+    height: 20px;
+    color: #445878;
+}
 
 
 
+/*LOGIN*/
 
+.StatusField {
+    color:#d9534f;
+}
 
+/*Övrigt*/
+
+.no-blogpost {
+    margin-left:30px; 
+    color: #d9534f;
+    margin-bottom: 80px;
+    text-align:center;
+}
+
+.blog-send-buttom { 
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.delite-button {
+color: #1C1D21;
+background-color: #d9534f;
+padding: 2px;
+text-decoration: none;
+/*float: right;*/
+}
+
+    /*ValidationSummary*/
+
+.ValidationSummary-div {
+
+}
+.alert-info {
+    color:#d9534f;
+    margin-top: 70px;
+    margin-bottom: -100px;
+    
+    text-align: center;
+    
+   
+}
+.alert-info ul {
+   
+    
+    list-style-type: none;
+}
 
 
 

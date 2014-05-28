@@ -23,24 +23,20 @@ namespace IDV430.Pages.User
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //call the recursive FindControl method
-            Control ctrl = this.FindControlRecursive("temptest");
-            //var t = ctrl.ClientID;
-            //ctrl.FindControl("HyperTest").Visible = false;
             
-            //ctrl.Visible = false;
-            //var test = ctrl.ToString();
-            //http://stackoverflow.com/questions/4955769/better-way-to-find-control-in-asp-net
-
-
-
-            //Control con = this.FindAnyControl("");
-            //HyperTest1.Visible = false;
-
-            //con.Visible = false;
-
-            //Control con = this.FindControl()
-            //con.Visible = false;
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    //call the recursive FindControl method
+                    Control ctrl = this.FindControlRecursive("temptest");
+                }
+                else
+                {
+                    Response.RedirectToRoute("Default", null);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }
         }
 
         // The id parameter should match the DataKeyNames value set on the control
