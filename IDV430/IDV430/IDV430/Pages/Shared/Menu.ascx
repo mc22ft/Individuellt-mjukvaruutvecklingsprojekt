@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Menu.ascx.cs" Inherits="IDV430.Pages.Shared.Menu" %>
 
 
-
+                <%--Navigations bar - Meny för när man INTE är inloggad--%>
 
 <div class="opacity">        
      <header style="background-image: url('../../Pics/background_fix1.png'); background-size: cover; padding-bottom: 20%; filter: brightness(0.2);" class="img-responsive">
@@ -29,6 +29,8 @@
                   <li><a href="#theGallery">theGallery</a></li>
                   <li><a href="#Kontakt">Kontakt</a></li>
 
+                    <%--Ändrar l'nkarna om man är inloggad så kan man logga ut på main sidan--%>
+
                     <% if (!HttpContext.Current.User.Identity.IsAuthenticated)
                                    {%>
                                         <li><asp:HyperLink class="hidden-sm login" ID="LoginButton" runat="server" Text="Login" NavigateUrl='<%$ RouteUrl:routename = Login %>' /></li>                  
@@ -36,12 +38,9 @@
                                 <% }
                                    else
                                    { %>
-                                        <li><asp:HyperLink class="hidden-sm login" ID="myPage" runat="server" Text="MinSida" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li>                  
-                                        <%--<li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>--%>
+                                        <li><asp:HyperLink class="hidden-sm login" ID="myPage" runat="server" Text="MinSida" NavigateUrl='<%$ RouteUrl:routename = UserAdmin %>' /></li> 
                                         <li><asp:Button ID="LogOut" runat="server" OnClick="SignOut" Text="Logga ut" class="hidden-sm signout btn signupOutButton" /></li>
-                                <% } %>
-                  
-
+                                <% } %>     
                 </ul>               
               </div>
            </div>

@@ -2,18 +2,15 @@
 
 <%@ Register Src="~/Pages/Shared/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <uc1:Menu runat="server" ID="Menu" />
 
 </asp:Content>
 
-
-
 <asp:Content ID="Register" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
+        <%--Registrerings formulär--%>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
 
         <div id="formid" class="form-group login-register">
@@ -54,9 +51,8 @@
 
      <script type="text/javascript">
 
-
          document.getElementById('formid').scrollIntoView(true);
-
+         //Scrollar ner 320px
          //window.scrollBy(0, 320);
 
     </script>

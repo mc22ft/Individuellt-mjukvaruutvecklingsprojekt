@@ -88,7 +88,7 @@ namespace IDV430.Model.DAL
 
         }
 
-
+        //Hämtar alla bloggposter
         public IEnumerable<Blog> GetBlogs()
         {
             //Skapar och initierar anslutningsobjektet
@@ -144,6 +144,7 @@ namespace IDV430.Model.DAL
             }
         }
 
+        //Hämtar en blog med id
         public Blog GetOneBlogById(int PostBlogID)
         {
             //Skapar och initierar anslutningsobjektet
@@ -197,6 +198,7 @@ namespace IDV430.Model.DAL
             }
         }
 
+        //Tar bort en blog
         public void DeleteBlog(int id)
         {
             // Skapar och initierar ett anslutningsobjekt.
@@ -226,6 +228,7 @@ namespace IDV430.Model.DAL
             }
         }
 
+        //Hämtar alla bloggar med ett visst id
         public IEnumerable<Blog> GetAllBlogById(string id)
         {
             //Skapar och initierar anslutningsobjektet
@@ -268,7 +271,6 @@ namespace IDV430.Model.DAL
                                 Content = reader.GetString(ContentBlogIndex),
                                 Date = reader.GetDateTime(DateIndex)
                             });
-
                         }
                     }
 

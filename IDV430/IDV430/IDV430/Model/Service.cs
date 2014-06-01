@@ -83,15 +83,10 @@ namespace IDV430.Model
             CommentDAL.SaveComment(Comment);
         }
 
-
-
-
+        //tar bort en kommentar
         public void DeleteComment(int id)
         {
             CommentDAL.DeleteComment(id);
         }
-
-
-
     }
 }

@@ -1,10 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MenuLoggedIn.ascx.cs" Inherits="IDV430.Pages.Shared.MenuLoggedIn" %>
 
+                                <%--Navigations bar - Meny för när man ÄR inloggad--%>
 
  <div class="opacity">
-                <header>
-
-                     <%--style="background-image: url('../../Pics/boat.JPG'); background-size: cover; padding-bottom: 60%; filter: brightness(0.2);" class="img-responsive" --%>
+                <header>                     
 
                     <%-- Boostrap meny! --%>
 
@@ -31,17 +30,12 @@
                                 <li><asp:HyperLink ID="myGallery" runat="server" Text="Galleriet" NavigateUrl='<%$ RouteUrl:routename = GalleryPage %>' /></li>                                
 
                                 <li><asp:HyperLink ID="ContactUs" runat="server" Text="Kontakta oss" NavigateUrl='<%$ RouteUrl:routename = Contact %>' /></li>
-
-                                <%--<li><asp:Button class="hidden-sm signup btn signupOutButton" runat="server" OnClick="SignOut" Text="Log out" /></li>
-
-                                <li><asp:HyperLink class="hidden-sm signup btn signupOutButton" ID="HyperLink2" runat="server" OnClick="SignOut" Text="LoggaUt" NavigateUrl='<%$ RouteUrl:routename = Default %>' /></li>--%>
-
+                                
                                 <li><asp:Button ID="LogOut" runat="server" OnClick="SignOut" Text="Logga ut" class="hidden-sm signout btn signupOutButton" /></li>
                                 
                             </ul>       
                         </div>
-                    </div>
-                    
+                    </div>                    
                 </header>
             </div>
 

@@ -3,17 +3,13 @@
 <%@ Register Src="~/Pages/Shared/MenuLoggedIn.ascx" TagPrefix="uc1" TagName="MenuLoggedIn" %>
 
 
-
+                            <%--GALLERIET!!!--%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+        <%--Meny inloggad--%>
     <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
     
-</asp:Content>
-
-
-                    
-                                <%--GALLERIET!!!--%>
+</asp:Content>                                
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     
@@ -23,6 +19,7 @@
 
            
             <div>
+                <%--Valederings kontroll--%>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
                     HeaderText="Fel inträffade. Korrigera felet och försök igen." 
                     ForeColor="#CC0000" />
@@ -49,7 +46,7 @@
                        
                     </HeaderTemplate>
                     <ItemTemplate>                       
-                          
+                                        <%--Fancybox--%>
                             <div class="imgContent" style="display:Block;">
                                     <asp:HyperLink class="fancybox-thumb" rel="fancybox-thumb" ID="myHyperLink" runat="server" 
                                         ImageUrl='<%# "~/Content/Files/" + Item.Name %>' >                               
@@ -61,20 +58,14 @@
                             </div>
                        
                     </ItemTemplate>
-                    <FooterTemplate>
-                       
+                    <FooterTemplate>                       
                     </FooterTemplate>
-
                 </asp:Repeater>
             </div>
 </asp:Content>
 
-
-
 <asp:Content ID="Content3" ContentPlaceHolderID="UnderMain1" runat="server">
 </asp:Content>
-
-
 
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderMain2" runat="server">
 </asp:Content>

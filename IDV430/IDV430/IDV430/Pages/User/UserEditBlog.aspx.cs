@@ -21,8 +21,7 @@ namespace IDV430.Pages.User
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+               //Undersöker om är inloggad
                 if (User.Identity.IsAuthenticated)
                 {
                     FormView1.Visible = false;
@@ -32,8 +31,6 @@ namespace IDV430.Pages.User
                     Response.RedirectToRoute("Default", null);
                     Context.ApplicationInstance.CompleteRequest();
                 }
-            }
-            
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -48,7 +45,6 @@ namespace IDV430.Pages.User
         public void EditFormView_UpdateItem(int PostBlogID)
         {
             var blog = Service.GetOneBlogById(PostBlogID);
-
             
             // Load the item here, e.g. item = MyDataLayer.Find(id);
             if (blog == null)
@@ -63,11 +59,10 @@ namespace IDV430.Pages.User
                 // Save changes here, e.g. MyDataLayer.SaveChanges();
                 Service.SaveBlog(blog);
                 //Skickar meddelande om att blog har updaterats
-               //Page.SetTempData("SuccessMessage", "Annonsen är updaterad.");
-                //Skickas till annonsen som har updaterats in med hjälp av id
+               //Page.SetTempData("SuccessMessage", "bloggen är updaterad.");
+                //Skickas till bloggen som har updaterats in med hjälp av id
                 Response.RedirectToRoute("OneBlogPage", new { id = blog.PostBlogID });
                 Context.ApplicationInstance.CompleteRequest();
-
             }
         }
 
@@ -78,8 +73,7 @@ namespace IDV430.Pages.User
             return Service.GetOneBlogById(id);
         }
 
-
-        //Tar bort en annons med hjälp av id som "fångas" av "e.CommandArgument"
+        //Tar bort en blog med hjälp av id som "fångas" av "e.CommandArgument"
         protected void DeleteLinkButton_Command(object sender, CommandEventArgs e)
         {
             //ModelState.IsValid = när man jobbar med data annotation(bindning)
@@ -87,39 +81,21 @@ namespace IDV430.Pages.User
             {
                 try
                 {
-
                     //Får ut id
                     var id = int.Parse(e.CommandArgument.ToString());
-
-                    //var idUser = User.Identity.Name;                    
-                    // User id och id på blog inlägg finns = Mathias och 16
-
-                    //Hämta från databasen vem som skrivit blog inlägg
-
-                    //var blogobj = Service.GetOneBlogById(id);
-
-                    //obj tomt
-                    //var obj = new IDV430.Model.Blog();                   
-
-                    Service.DeleteBlog(id);
-
-                    //Service.DeleteAnnons(id);
-                    ////Skickar meddelande om att annonsen sparades
-                    //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
-                    ////Skickas till annonsen som har lagts in med hjälp av id
+                               
+                    Service.DeleteBlog(id);                   
+                                        
                     Response.RedirectToRoute("UserAdmin", null);
                     Context.ApplicationInstance.CompleteRequest();
-
                 }
                 catch (Exception)
                 {
                     ModelState.AddModelError(String.Empty, "Ett fel inträffade då annonsen skulle tas bort.");
                 }
-
             }
         }
-
-
+        
         //HÄMTAR ALLA KOMMENTARER TILL ETT BLOG INLÄGG
         public IEnumerable<IDV430.Model.Comment> GetListComments_GetItem([RouteData]int id)
         {
@@ -134,41 +110,20 @@ namespace IDV430.Pages.User
             {
                 try
                 {
-
                     //Får ut id
                     var id = int.Parse(e.CommandArgument.ToString());
-
-                    //var idUser = User.Identity.Name;                    
-                    // User id och id på blog inlägg finns = Mathias och 16
-
-                    //Hämta från databasen vem som skrivit blog inlägg
-
-                    //var blogobj = Service.GetOneBlogById(id);
-
-                    //obj tomt
-                    //var obj = new IDV430.Model.Blog();
-
-                    Service.DeleteComment(id);
-
-                    //Service.DeleteAnnons(id);
-                    ////Skickar meddelande om att annonsen sparades
-                    //Page.SetTempData("SuccessMessage", "Annonsen är raderad.");
-
-                    ////Skickas till annonsen som har lagts in med hjälp av id
-                    Response.RedirectToRoute("UserEditBlog", null); //In med blog id
+                    
+                    Service.DeleteComment(id); 
+                   
+                    Response.RedirectToRoute("UserEditBlog", null); 
                     Context.ApplicationInstance.CompleteRequest();
-
                 }
                 catch (Exception)
                 {
                     ModelState.AddModelError(String.Empty, "Ett fel inträffade då annonsen skulle tas bort.");
                 }
-
             }
         }
-
-
-       
 
         // The id parameter name should match the DataKeyNames value set on the control
         public void BlogEditFormView_UpdateItem(int PostBlogID)
@@ -178,9 +133,9 @@ namespace IDV430.Pages.User
                 var blog = Service.GetOneBlogById(PostBlogID);
                 if (blog == null)
                 {
-                    // Hittade inte kunden.
+                    // Hittade inte bloggen.
                     ModelState.AddModelError(String.Empty,
-                        String.Format("Annonsen med annonsnummer {0} hittades inte.", PostBlogID));
+                        String.Format("Bloggen {0} hittades inte.", PostBlogID));
                     return;
                 }
 
@@ -188,9 +143,9 @@ namespace IDV430.Pages.User
                 if (TryUpdateModel(blog))
                 {
                     Service.SaveBlog(blog);
-                    //Skickar meddelande om att annonsen har updaterats
-                    //Page.SetTempData("SuccessMessage", "Annonsen är updaterad.");
-                    //Skickas till annonsen som har updaterats in med hjälp av id
+                    //Skickar meddelande om att bloggen har updaterats
+                    //Page.SetTempData("SuccessMessage", "Bloggen är updaterad.");
+                    //Skickas till bloggen som har updaterats in med hjälp av id
                     Response.RedirectToRoute("UserEditBlog", new { id = blog.PostBlogID });
                     Context.ApplicationInstance.CompleteRequest();
                 }
@@ -198,21 +153,15 @@ namespace IDV430.Pages.User
             //Blev något fel i updateringen så fångas det upp här och precenteras i ValidationSummary
             catch (Exception)
             {
-                ModelState.AddModelError(String.Empty, "Fel inträffade då Annonsen skulle uppdateras.");
+                ModelState.AddModelError(String.Empty, "Fel inträffade då Bloggen skulle uppdateras.");
             }
         }
 
+        //När updaterings knappen klickas = Görms Formviev2 och vissa formview1 för redigering
         public void Redigera_Command(object sender, CommandEventArgs e)
         {
             FormView2.Visible = false;
-
             FormView1.Visible = true;
-
         }
-
-
-        
-
-
     }
 }

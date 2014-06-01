@@ -3,37 +3,20 @@
 <%@ Register Src="~/Pages/Shared/MenuLoggedIn.ascx" TagPrefix="uc1" TagName="MenuLoggedIn" %>
 
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
 </asp:Content>
 
-
-
-
-
-                                             <%-- Hämtar ett blog inlägg --%>
+                                             <%-- Hämtar ETT blog inlägg --%>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-
+            
     <div class="ValidationSummary-div">
                     <%-- Presenterar meddelande --%>
             <asp:ValidationSummary runat="server" class="alert alert-dismissable alert-info" /> 
     </div>
-
-
-
-    <asp:LoginView ID="LoginView1" runat="server">
-
-        <%-- --%>
-        <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
-
-        <%-- --%>
-        <LoggedInTemplate>
-
-
-
-
+       
+                    <%--Hämtar en bloggpost--%>
             <asp:FormView ID="FormView1" runat="server"
                 ItemType="IDV430.Model.Blog"
                 SelectMethod="GetOneBlogPost_GetItem" class="readBlogPost">
@@ -62,28 +45,7 @@
                         <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
                         <h3>Det finns inga blog poster.</h3> 
                </EmptyDataTemplate>
-            </asp:FormView>
-        </LoggedInTemplate>
-    </asp:LoginView>
-<%--
-    <div>
-                 Bottoms, "ta bort" ligger det javascript på 
-                
-                <asp:LinkButton ID="Redigera" runat="server" Text="Redigera" class="btn btn-primary btn-xs" Visible="False" />   
-
-                <asp:LinkButton runat="server" ID="DeleteLinkButton99" Text="Ta bort" class="btn btn-danger btn-xs"
-                        CausesValidation="false" 
-                        OnClientClick='<%# String.Format("return AlertDelete(\"{0}\");", Eval("HeadLine")) %>'
-                        OnCommand="DeleteLinkButton_Command"          
-                        CommandArgument='<%$ RouteValue:id %>' 
-                        Visible="False" />
-
-                <asp:HyperLink ID="BackHyperLink" runat="server" Text="Tillbaka"  NavigateUrl='<%# GetRouteUrl("BlogListPage", null) %>' class="btn btn-primary btn-xs" Visible="False" />
-    </div>
- --%>
-
-
-           
+            </asp:FormView>    
 
     <%-- JavaScript (ska in i extern fil) --%>
     <script type="text/javascript">
@@ -101,18 +63,10 @@
 
 
 
-                                           <%-- Kommentarer till blog inlägg --%>
+                                          <%-- Skriver en kommentarer till ett blogginlägg --%>            
+                                          <%--Med Valederingskontroller på varje textbox--%>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="UnderMain1" runat="server">
-
-    <asp:LoginView ID="LoginView2" runat="server">
-        <%-- --%>
-        <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
-        <%-- --%>
-        <LoggedInTemplate>
-    <%-- In med kommentars funktion här!!!! 
-                                
-        <asp:Button ID="CommentButton" runat="server" Text="Kommentera inlägget" OnClick="CommentButton_Click" />--%>
 
             <asp:FormView ID="FormView2" runat="server"
                 ItemType="IDV430.Model.Comment"
@@ -127,7 +81,7 @@
                             </div>
                             <div class="comment-Blog-content">     
                                 <div class="comment-Blog-content-div1">     
-                                    <div>
+                                    <div>                   <%--Namn--%>
                                         <asp:Label ID="Label2" runat="server" Text="Namn:"></asp:Label>
                                         <asp:TextBox ID="CommentName" runat="server" Text='<%#: BindItem.Name %>' MaxLength="30" />
                                         <asp:RequiredFieldValidator ID="RubrikRequiredFieldValidator1" runat="server" 
@@ -139,7 +93,7 @@
                                                         SetFocusOnError="True">
                                         </asp:RequiredFieldValidator>
                                     </div>
-                                    <div>
+                                    <div>               <%--Epost--%>
                                         <asp:Label ID="Label3" runat="server" Text="Epost:"></asp:Label>
                                         <asp:TextBox ID="CommentEpost" runat="server" Text='<%#: BindItem.Epost %>' MaxLength="50" />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
@@ -160,7 +114,7 @@
                                             ValidationExpression="^[\w-]+(\.[\w-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$">
                                         </asp:RegularExpressionValidator>
                                     </div>
-                                    <div>
+                                    <div>               <%--www--%>
                                         <asp:Label ID="Label4" runat="server" Text="www:"  class="comment-Blog-content-div1-3"></asp:Label>
                                         <asp:TextBox ID="CommentWebbPage" runat="server" Text='<%#: BindItem.Webbpage %>' MaxLength="50" />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
@@ -174,7 +128,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-Blog-content-div2">
-                                    <div>
+                                    <div>               <%--Kommentar--%>
                                         <asp:Label ID="Label5" runat="server" Text="Kommentar:"></asp:Label>
                                         <asp:TextBox ID="CommentCommentTxt" runat="server" TextMode="MultiLine" Text='<%#: BindItem.CommentTxt %>' class="comment-Blog-content-div2-txtbox" MaxLength="300" />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
@@ -189,32 +143,18 @@
                                 </div>
                             </div>
                                 <div class="make-comment-Blog-bottom">
-                                    <asp:LinkButton ID="CommentLinkButton1" runat="server" Visible="True" CommandName="Insert" Text="Posta" />
-                                   <%-- <asp:LinkButton ID="CommentLinkButton2" runat="server" Visible="True" CommandName="Cancel" Text="Rensa" />--%>
+                                    <asp:LinkButton ID="CommentLinkButton1" runat="server" Visible="True" CommandName="Insert" Text="Posta" />                                   
                                 </div>
                         </div>
                     </InsertItemTemplate>
-
             </asp:FormView>
-
-            </LoggedInTemplate>
-    </asp:LoginView>
-
 </asp:Content>
 
-                                         <%-- Hämtar kommentarer till ett bloginlägg --%>
+                                         <%-- Hämtar ALLA kommentarer till ett bloginlägg --%>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderMain2" runat="server">
-
-    <asp:LoginView ID="LoginView3" runat="server">
-
-        <%-- --%>
-        <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
-
-        <%-- --%>
-        <LoggedInTemplate>
-
-            <asp:ListView ID="FormView1" runat="server"
+     
+            <asp:ListView ID="FormView11" runat="server"
                 ItemType="IDV430.Model.Comment"
                 SelectMethod="GetListComments_GetItem"                 
                 >
@@ -241,28 +181,17 @@
                         <%-- Kommentar i blog --%>
                         <div class="comment-Blog-content">
                             <p><%#: Item.CommentTxt %></p>
-                        </div>
-                        
+                        </div>                        
+                                    <%--Länkar till kommentatorns webbpage och kontakt uppifter--%>
                         <div class="comment-Blog-bottom">                           
                             <p><asp:HyperLink ID="HyperLink1" runat="server" Url="<%#: Item.Webbpage %>">Hemsida:  <%#: Item.Webbpage %></asp:HyperLink></p>
                             <p><asp:HyperLink ID="HyperLink2" runat="server" Url="<%#: Item.Epost %>">Kontakt:  <%#: Item.Epost %></asp:HyperLink></p>                               
-                        </div>
-                       
+                        </div>                       
                     </div>
-
-
                 </ItemTemplate>
-
-
                 <EmptyDataTemplate>
                         <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
                         <h3 class="no-blogpost">Det finns inga kommentarer till denna blogpost</h3> 
                </EmptyDataTemplate>
-
             </asp:ListView>
-
-        </LoggedInTemplate>
-
-    </asp:LoginView>
-
 </asp:Content>

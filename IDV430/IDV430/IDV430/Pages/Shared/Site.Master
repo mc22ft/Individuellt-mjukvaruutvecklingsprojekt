@@ -2,7 +2,7 @@
 
 <%@ Register Src="~/Pages/Shared/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 
-
+                            <%-- MASTER PAGE --%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,54 +22,30 @@
         <link rel="stylesheet" href="../../Content/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
         <script type="text/javascript" src="../../Scripts/jquery.fancybox-thumbs.js"></script>
 
-
-
-</head>
-    <%-- Påminelser och anteckningar här!
-        
-            Fancybox till bilarkiv?
-        
-        --%>
-
-
-
-
-
+</head>    
 <body>
     <form id="form1" runat="server">
 
         <asp:ContentPlaceHolder ID="head" runat="server">
-
-            
-
         </asp:ContentPlaceHolder>
 
         <main>
 
-
-
             <div>
-                <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
-        
-                    
-
+                <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">   
                 </asp:ContentPlaceHolder>
             </div>
 
 
             <div>
-                <asp:ContentPlaceHolder ID="UnderMain1" runat="server">
-        
+                <asp:ContentPlaceHolder ID="UnderMain1" runat="server">        
                 </asp:ContentPlaceHolder>
             </div>
 
              <div>
-                <asp:ContentPlaceHolder ID="UnderMain2" runat="server">
-        
+                <asp:ContentPlaceHolder ID="UnderMain2" runat="server">        
                 </asp:ContentPlaceHolder>
             </div>
-
-            
 
             <script type="text/javascript">
               
@@ -101,31 +77,12 @@
                                 height: 100,
                                 
                             }
-                        }
-                        
+                        }                       
                             
                     });                    
                 });
 
-              
-
-                //$(document).ready(function () {
-                //    $(".fancybox-thumb").fancybox(
-                //        {
-                //            afterClose: function () { location.reload(); return; }
-                //        });
-                //});
-
-                
             </script>
-
-
-
-
-
-
-
-
         </main>
          <!-- Footer
     ================================================== -->
@@ -189,20 +146,4 @@
 
     </form>
 </body>
-
-<%--    <script type="text/javascript">
-        var num = 50; //number of pixels before modifying styles
-
-        $(window).bind('scroll', function () {
-            if ($(window).scrollTop() > num) {
-                $('.topMeny').addClass('fixed');
-            } else {
-                $('.topMeny').removeClass('fixed');
-            }
-        });
-
-        
-
-    </script> 
---%>
 </html>

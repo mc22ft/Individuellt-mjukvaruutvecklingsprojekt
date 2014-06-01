@@ -4,9 +4,11 @@
 
 
 
+                    <%--Här listas ALLA bloggar--%>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">    
-
+    <%--Meny för inloggad--%>
     <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
 
 </asp:Content>
@@ -14,15 +16,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-
-     <%-- --%>
-                <asp:LoginView ID="LoginView1" runat="server">
-
-                    <%-- --%>
-                    <AnonymousTemplate>INTE inloggad</AnonymousTemplate>
-
-                    <%-- --%>
-                    <LoggedInTemplate>
+         
 
                         <div class="list-blog-content">
                             <h1>Alla senaste inläggen</h1>
@@ -42,8 +36,7 @@
                                 <div class="my-blog-list">
                                     <%-- HeadLine --%>
                                     <div>                                    
-                                        <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>
-                                    
+                                        <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' ><%#: Item.HeadLine %></asp:HyperLink></h1>                                    
 
                                     <%-- datum - UserNamn --%>
                                     
@@ -55,16 +48,11 @@
                                         <p><%#: Item.Content %></p>
                                     </div>
                                     <div>
-                                        <asp:HyperLink ID="HyperLink2" runat="server" Text="Kommentera" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' class="btn btn-primary btn-xs comment-button" />
-                                        
+                                        <asp:HyperLink ID="HyperLink2" runat="server" Text="Kommentera" NavigateUrl='<%# GetRouteUrl("OneBlogPage", new { id = Item.PostBlogID })%>' class="btn btn-primary btn-xs comment-button" />                                        
                                     </div>
                                 </div>
-                               
-
 
                             </ItemTemplate>
-                            
-
 
                             <EmptyDataTemplate>
                                 <%-- Detta visas då kunduppgifter saknas i databasen. --%>                               
@@ -72,9 +60,6 @@
                             </EmptyDataTemplate>
 
                         </asp:ListView>
-                        <div class="margin-bottom-blog"></div>
-                    </LoggedInTemplate>
-                </asp:LoginView> 
-
+                        <div class="margin-bottom-blog"></div>                   
 </asp:Content>
 

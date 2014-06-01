@@ -31,24 +31,6 @@ namespace IDV430 {
         protected global::IDV430.Pages.Shared.Menu Menu;
         
         /// <summary>
-        /// phLoginStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phLoginStatus;
-        
-        /// <summary>
-        /// StatusText1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal StatusText1;
-        
-        /// <summary>
         /// LoginForm control.
         /// </summary>
         /// <remarks>

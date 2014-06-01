@@ -11,18 +11,17 @@ namespace IDV430.Pages.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            //Undersöker om är inloggad
+            if (User.Identity.IsAuthenticated)
             {
-                if (User.Identity.IsAuthenticated)
-                {
 
-                }
-                else
-                {
-                    Response.RedirectToRoute("Default", null);
-                    Context.ApplicationInstance.CompleteRequest();
-                }
             }
+            else
+            {
+                Response.RedirectToRoute("Default", null);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+            
         }
     }
 }

@@ -16,28 +16,18 @@ namespace IDV430
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    ////Skickas till annonsen som har lagts in med hjälp av id
+                    //Skickas till annonsen som har lagts in med hjälp av id
                     Response.RedirectToRoute("BlogListPage", null); //In med blog id
-                    Context.ApplicationInstance.CompleteRequest();
-                   
-                    //StatusText.Text = string.Format("Hej {0}!", User.Identity.GetUserName());
-                    //phLoginStatus.Visible = true;
-                    //LogoutButton.Visible = true;
-                    //LoginForm.Visible = false;
-
-
-                    
+                    Context.ApplicationInstance.CompleteRequest();                                    
                 }
                 else
-                {
-                    phLoginStatus.Visible = false;
+                {                   
                     LoginForm.Visible = true;
                 }
-            }
-
-            
+            }            
         }
 
+            //Login Funktion Identity
         protected void SignIn(object sender, EventArgs e)
         {
             var userStore = new UserStore<IdentityUser>();
@@ -68,6 +58,7 @@ namespace IDV430
             }
         }
 
+            //Logout
         protected void SignOut(object sender, EventArgs e)
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;

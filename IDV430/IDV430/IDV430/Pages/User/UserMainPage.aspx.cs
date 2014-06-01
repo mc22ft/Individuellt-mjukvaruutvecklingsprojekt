@@ -21,18 +21,17 @@ namespace IDV430.Pages.UserMainPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            //Undersöker om är inloggad
+            if (User.Identity.IsAuthenticated)
             {
-                if (User.Identity.IsAuthenticated)
-                {
 
-                }
-                else
-                {
-                    Response.RedirectToRoute("Default", null);
-                    Context.ApplicationInstance.CompleteRequest();
-                }
             }
+            else
+            {
+                Response.RedirectToRoute("Default", null);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+            
         }
 
         // The return type can be changed to IEnumerable, however to support
@@ -41,6 +40,8 @@ namespace IDV430.Pages.UserMainPage
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
+
+        //Hämtar lista med ALLA bloggposter
         public IEnumerable<IDV430.Model.Blog> ListBlogPost_GetData()
         {
              var blog = Service.GetBlogs();

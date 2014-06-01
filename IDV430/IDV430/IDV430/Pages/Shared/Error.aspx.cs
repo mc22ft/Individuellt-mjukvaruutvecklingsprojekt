@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace IDV430.admin
+namespace IDV430.Pages.Shared
 {
-    public partial class admin : System.Web.UI.Page
+    public partial class Error : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

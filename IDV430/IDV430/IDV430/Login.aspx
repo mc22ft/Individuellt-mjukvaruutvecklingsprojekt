@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      
-
+    <%--Under söker vilken meny som ska vissas = om du är inloggad eller ej--%>
     <% if (HttpContext.Current.User.Identity.IsAuthenticated)
                                    {%>
                                         <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />
@@ -15,30 +15,14 @@
                                    else
                                    { %>
                                         <uc1:Menu runat="server" ID="Menu" />
-                                <% } %>
-
-    
+                                <% } %>    
    
 </asp:Content>
 
+
 <asp:Content ID="LogInId" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-    
-
-    <asp:PlaceHolder runat="server" ID="phLoginStatus" Visible="false">
-        <h1>Nu är du inloggad!</h1>
-        <p>
-            <asp:Literal runat="server" ID="StatusText1" />
-        </p>
-        <a href="pages/gallery/Gallery.aspx">Gallery.aspx</a>
-        <a href="admin/admin.aspx">admin.aspx</a>
-        <a href="pages/User/UserAdmin.aspx">UserAdmin.aspx</a>
-        <a href="pages/User/UserMainPage.aspx">UserMainPage.aspx</a>
-
-    </asp:PlaceHolder>
-
-
-
+                    <%--Login formulär--%>
     <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
         <div id="formid" class="form-group login-register">
             
@@ -68,7 +52,6 @@
     </asp:PlaceHolder>
 
 
-
     <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
         <div>
             <div>
@@ -79,11 +62,10 @@
 
     <script type="text/javascript">
 
-
         document.getElementById('formid').scrollIntoView(true);
 
+        //Scrollar ner 320px
         //window.scrollBy(0, 320);
-
     </script>
 
 </asp:Content>

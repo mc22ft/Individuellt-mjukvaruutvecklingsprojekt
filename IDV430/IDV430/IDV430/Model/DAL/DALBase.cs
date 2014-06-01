@@ -7,6 +7,8 @@ using System.Web.Configuration;
 
 namespace IDV430.Model.DAL
 {
+
+    //Hämtar connectionstring i webconfig
     public class DALBase
     {
         //fält

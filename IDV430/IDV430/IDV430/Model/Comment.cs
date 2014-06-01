@@ -22,8 +22,6 @@ namespace IDV430.Model
 
         public DateTime Date { get; set; }
 
-
-
         public int PostBlogID { get; set; }
     }
 }

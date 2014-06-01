@@ -2,6 +2,7 @@
 
 <%@ Register Src="~/Pages/Shared/MenuLoggedIn.ascx" TagPrefix="uc1" TagName="MenuLoggedIn" %>
 
+                <%--KONTAKT SIDA!--%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <uc1:MenuLoggedIn runat="server" ID="MenuLoggedIn" />

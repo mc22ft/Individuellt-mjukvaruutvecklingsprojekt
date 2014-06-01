@@ -26,19 +26,18 @@ namespace IDV430.Pages.User
         protected void Page_Load(object sender, EventArgs e)
         {
             var QName = Request.QueryString["image"];
-
-            if (!IsPostBack)
+            
+            //Undersöker om är inloggad
+            if (User.Identity.IsAuthenticated)
             {
-                if (User.Identity.IsAuthenticated)
-                {
-                    Gallery myGalleryObjekt = new Gallery();
-                }
-                else
-                {
-                    Response.RedirectToRoute("Default", null);
-                    Context.ApplicationInstance.CompleteRequest();
-                }
-            }   
+                Gallery myGalleryObjekt = new Gallery();
+            }
+            else
+            {
+                Response.RedirectToRoute("Default", null);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+               
         }
         
         //Här kommer filen in...
@@ -61,8 +60,7 @@ namespace IDV430.Pages.User
                         FileUploadText.Text = string.Format("Bilen har '{0}' sparats.", nameOfUploadFile);
                     }
                     else
-                    {
-                        
+                    {                        
                         FileUploadText.Text = string.Format("Något gick fel med filen '{0}'.! Försök igen...", nameOfUploadFile);
                     }
                 }
@@ -73,6 +71,7 @@ namespace IDV430.Pages.User
             }
         }
 
+        //Hämtar bilderna
         public IEnumerable<FileData> Repeater_GetData()
         {
             return Gallery.GetImagesNames();
@@ -80,7 +79,6 @@ namespace IDV430.Pages.User
         
         protected void Repeater_ItemDataBound1(object sender, RepeaterItemEventArgs e)
         {
-
             var QName = Request.QueryString["image"] ?? string.Empty;
             var fileinfo = (FileData)e.Item.DataItem;
             if (fileinfo != null && QName == fileinfo.Name)

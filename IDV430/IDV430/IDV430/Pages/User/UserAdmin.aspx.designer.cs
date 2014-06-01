@@ -22,21 +22,21 @@ namespace IDV430.Pages.Blog {
         protected global::IDV430.Pages.Shared.MenuLoggedIn MenuLoggedIn;
         
         /// <summary>
-        /// LoginView1 control.
+        /// FormView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView1;
+        protected global::System.Web.UI.WebControls.FormView FormView1;
         
         /// <summary>
-        /// LoginView2 control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView2;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
     }
 }

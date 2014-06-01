@@ -17,7 +17,7 @@ namespace IDV430
                 
             ));
 
-            //Inlänkade javascript
+            //Inlänkade javascript / jquery
             bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/jquery-2.1.0.js",

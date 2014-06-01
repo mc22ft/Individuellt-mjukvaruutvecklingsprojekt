@@ -3,11 +3,13 @@
 <%@ Register Src="~/Pages/Shared/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
 
 
-<%-- MENY --%>
+<%-- Detta presenterar huvudsidan, första sidan.  --%>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      
+
+    <%--Main meny bar--%>
     <uc1:Menu runat="server" ID="Menu" />
    
 </asp:Content>
@@ -162,8 +164,4 @@
 <%-- FOOTER --%>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="UnderMain2" runat="server">
-
-   
-
-
 </asp:Content>

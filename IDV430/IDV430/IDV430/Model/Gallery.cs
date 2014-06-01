@@ -32,10 +32,8 @@ namespace IDV430
         }
 
         //Metoder In med FileData isället för string, Server mot path.combine
-
         public static IEnumerable<FileData> GetImagesNames() //Returnerar en ref: bildernas filnamn i bokstavsordning - Anv klass, DirectoyInfo med metoden GetFiles. Se till att filerna är i rätt format
         {
-
 
             //public static IEnumerable<string> GetImagesNames() //Returnerar en ref: bildernas filnamn i bokstavsordning - Anv klass, DirectoyInfo med metoden GetFiles. Se till att filerna är i rätt format
             //{
@@ -49,32 +47,8 @@ namespace IDV430
                         Name = fi.Name,
                         Css = "FocusImg"
 
-                    }).OrderBy(fi => fi.Name).ToList();
-            //.OrderBy(();
-
-            //DirectoryInfo listOfFiles = new DirectoryInfo(PhsicalUploadImagePath, "Files"); //? 
-            //List<String> TestedList = new List<String>();
-
-            //foreach (var file in listOfFiles.GetFiles())
-            //{
-            //    string fileName = file.Name;
-
-            //    Match matchString = ApprovedExenstions.Match(fileName);
-
-            //    if (matchString.Success)
-            //    {
-            //        TestedList.Add(fileName); //Godkänntfilnamn Lägg i "nya" listan
-            //    }
-            //    else
-            //    {
-            //        //Kasta undantag 
-            //    }
-            //}
-            //TestedList.Sort();
-
-            //return TestedList;
+                    }).OrderBy(fi => fi.Name).ToList();           
         }
-
 
         public static bool ImageExist(string name) //return tru om ett lika namn finns i katalogen för uppkadddade bilder. annars false
         {
@@ -86,8 +60,7 @@ namespace IDV430
             {
                 return false;
             }
-
-        }
+                    }
 
         private static bool IsValidImage(Image image) //returnaerar tru- verkligrn är av typen gif jpeg png. Läs mer... (MIME-typ)
         {
@@ -139,25 +112,20 @@ namespace IDV430
                         truORfalse = ImageExist(path);
                     } while (truORfalse);
                 }
+
                 //Binder map plats och filnamn   
-
-
                 if (!IsValidImage(image)) //Test om image är av rätt image typ
                 {
                     //Kasta undantag
                     throw new ArgumentException("Bilden har fel typ");
                 }
-
                 image.Save(path);
-
-
             }
             else
             {
                 //Felmeddelande fel filändelse
                 throw new ArgumentException("Bilden har fel typ");
             }
-
 
             //tumnagelbild
             //var image = System.Drawing.Image.FromStream(path); // stream -> ström med bild
@@ -183,33 +151,3 @@ namespace IDV430
         }
     }
 }
-//public static string SaveImage(Stream stream, string fileName) //verify - rätt MIME-typ(kasta undantag). säkerställer filmnamn är unik. sparar bild - skapar, och sparar tumnagelbild. filnamn bilden sparas under retuneras.
-//            {
-//                return fileName;
-//}
-
-//byte[] originalCoverData;
-// string imageUrl = "http://www.gazzetta.it/Media/Foto/2007/04/17/1900384--346x212.jpg";
-
-
-// originalCoverData = new System.Net.WebClient().DownloadData(imageUrl);
-
-
-// System.IO.MemoryStream stream = new System.IO.MemoryStream(originalCoverData);
-// System.Drawing.Image img = System.Drawing.Image.FromStream(stream);
-
-
-// img.Save(Server.MapPath("img.bmp"));
-
-
-//img.Save(Server.MapPath("img.bmp"));
-
-//foreach (FileInfo OneFile in MyFiles.GetFiles()) 
-//           {
-//               string fold = Path.Combine(OneFile.DirectoryName, @"results\");
-
-//               if (!Directory.Exists(fold))
-//                   Directory.CreateDirectory(fold);
-
-//               File.Move(OneFile.FullName, Path.Combine(fold, OneFile.Name));
-//           }

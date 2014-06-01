@@ -9,6 +9,8 @@ namespace IDV430.Model.DAL
 {
     public class CommentDAL : DALBase
     {
+
+        //Sparar en kommentar
         public void SaveComment(Comment Comment)
         {
 
@@ -46,12 +48,9 @@ namespace IDV430.Model.DAL
                     throw new ApplicationException("Fel när det skulle läggas till i databasen!");
                 }
             }
-
         }
-
-
-
-
+        
+        //Hämtar en kommentar med id
         public IEnumerable<Comment> GetComments(int BlogID)
         {
             //Skapar och initierar anslutningsobjektet
@@ -125,7 +124,7 @@ namespace IDV430.Model.DAL
         }
 
 
-
+        //Tar bort en kommentar med id
         public void DeleteComment(int id)
         {
             // Skapar och initierar ett anslutningsobjekt.
@@ -143,7 +142,6 @@ namespace IDV430.Model.DAL
                     //Öppnar anslutningen, databasen
                     conn.Open();
 
-
                     //Exekvera den lagrade proceduren.
                     cmd.ExecuteNonQuery();
                 }
@@ -153,9 +151,6 @@ namespace IDV430.Model.DAL
                     throw new ApplicationException("Det blev något fel i hämtningen från databasen!");
                 }
             }
-        }
-
-           
-        
+        }          
     }
 }

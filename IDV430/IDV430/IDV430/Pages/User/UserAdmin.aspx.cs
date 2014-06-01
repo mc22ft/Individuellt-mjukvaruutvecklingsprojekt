@@ -22,43 +22,34 @@ namespace IDV430.Pages.Blog
             get { return _service ?? (_service = new Service()); }
         }
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            //Undersöker om är inloggad
+            if (User.Identity.IsAuthenticated)
             {
-                if (User.Identity.IsAuthenticated)
-                {
 
-                }
-                else
-                {
-                    Response.RedirectToRoute("Default", null);
-                    Context.ApplicationInstance.CompleteRequest();
-                }
             }
+            else
+            {
+                Response.RedirectToRoute("Default", null);
+                Context.ApplicationInstance.CompleteRequest();
+            }            
         }
 
-        //
+        //Skapar en bloggpost
         public void CreateBlog_InsertItem(IDV430.Model.Blog blog)
-        {
-            //var item = new IDV430.Model.Blog();
-            //TryUpdateModel(item);
+        {           
             if (ModelState.IsValid)
             {
                 try 
                 {
                     blog.UserID = User.Identity.Name;  
-                    Service.SaveBlog(blog);
-                    //Service.SaveBlog(blog);
-
+                    Service.SaveBlog(blog);  
                 }
                 catch (Exception) //Fångar upp fel
                 {
                     ModelState.AddModelError(String.Empty, "Ett fel inträffade när blogen skulle läggas till");
-                }
-                // Save changes here
-
+                }             
             }
         }
 
@@ -68,14 +59,12 @@ namespace IDV430.Pages.Blog
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
+
+        //HÄMTAR ALLA BLOGG POSTER FÖR DEN SOM ÄR INLOGGAD
         public IEnumerable<IDV430.Model.Blog> GetmyListView_GetData()
         {
-
             var id = User.Identity.Name;
-
             return Service.GetAllBlogById(id);
         }
-
-
     }
 }
