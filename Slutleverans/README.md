@@ -1,5 +1,13 @@
-fancyBox
+Slutleverans av mitt projekt.
 ========
+
+
+https://drive.google.com/folderview?id=0B9cRxWu_VzJGQkdxMkx0M3VTa0U&usp=sharing
+
+
+
+
+
 
 fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
 
