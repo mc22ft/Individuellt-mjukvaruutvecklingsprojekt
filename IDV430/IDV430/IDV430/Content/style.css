@@ -19,6 +19,10 @@
     
 }
 
+.fancybox-thumb img {
+    width:100%;
+    
+}
 
 
 
@@ -133,7 +137,7 @@ margin-right:30px;
 
     color:#1C1D21;
     height:400px;
-    background-color:#EEEFF7;
+    background-color:#ECF4FF;
     font-size:150%;
     border-bottom: 1px solid #1C1D21;
     border-top: 1px solid #1C1D21;
@@ -153,6 +157,12 @@ margin-right:30px;
 .carousel-caption{
     margin-bottom: -25px;
 }
+
+.control-slide {
+   color: #d9534f;
+   background-color:#EEEFF7;
+}
+
 
 /*OmyRoom*/
 #OmyRoom {
@@ -217,10 +227,17 @@ margin-right:30px;
         Svart       #1C1D21
         Grå         #31353D
         Blå         #445878
-        Ljusblå     #90BBFF
+        Ljusblå     #90BBFF    
         Turkos      #92CDCF
         Vit/LjusGrå #EEEFF7
         Mörk grå    #BDBEC4
+
+        Röd         #d9534f
+
+        Ljusblå     #D5E5FF
+        Ljusblåare  #E1EEFF
+        Ljusblåast  #ECF4FF
+        
 */
 
 
@@ -295,13 +312,15 @@ margin-right:30px;
 /*
     Färger som jag använder
 
-        Svart       #1C1D21
+         Svart       #1C1D21
         Grå         #31353D
         Blå         #445878
         Ljusblå     #90BBFF    
         Turkos      #92CDCF
         Vit/LjusGrå #EEEFF7
         Mörk grå    #BDBEC4
+
+        Röd         #d9534f
         
 */
 
@@ -369,7 +388,7 @@ a.hover:hover {
     margin-top:120px;
     /*height:400px;*/
     margin-bottom:110px;
-    background-color: #90BBFF;
+    background-color: #ECF4FF;
 }
 
 .edit-blog1 {
@@ -474,7 +493,7 @@ a.hover:hover {
 
 .make-comment-Blog {
     border: 1px solid #BDBEC4;
-    margin-left: 48%;
+    margin-left: 87%;
     margin-right: 0;
     width: 250%;
     margin-bottom: 30px;
@@ -523,6 +542,7 @@ a.hover:hover {
     overflow: auto;
     margin: 1% 5% 5% 5%;
     height: 500px;
+    
  }
 
  .imgContent {

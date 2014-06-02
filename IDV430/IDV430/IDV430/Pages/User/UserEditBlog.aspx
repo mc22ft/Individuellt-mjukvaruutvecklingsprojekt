@@ -192,7 +192,7 @@
                         <%-- JavaScript (ska in i extern fil) --%>
                 <script type="text/javascript">
                     function AlertDelete(Name) {
-                        if (confirm("Ta bort annonsen " + Name + " permanent!") == true) {
+                        if (confirm("Ta bort kommentaren skapat av " + Name + " permanent!") == true) {
                             return true;
                         }
                         else {
