@@ -21,10 +21,10 @@ namespace IDV430
         {
             ApprovedExenstions = new Regex(@"^.*\.(gif|jpg|png)$", RegexOptions.IgnoreCase); // kanske lägga till \
 
-            PhsicalUploadImagePath = Path.Combine(
-                AppDomain.CurrentDomain.GetData("APPBASE").ToString(),
-                @"Content\" //Files
-                );
+            PhsicalUploadImagePath = HttpContext.Current.Server.MapPath("Content");
+                //AppDomain.CurrentDomain.GetData("APPBASE").ToString(),
+                //@"Content\" //Files
+                //);
 
             var invalidChars = new string(Path.GetInvalidFileNameChars());
             SantizePath = new Regex(string.Format("[{0}]", Regex.Escape(invalidChars)));

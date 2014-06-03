@@ -4,7 +4,7 @@
                 <%--Navigations bar - Meny för när man INTE är inloggad--%>
 
 <div class="opacity">        
-     <header style="background-image: url('../../Pics/background_fix1.png'); background-size: cover; padding-bottom: 20%; filter: brightness(0.2);" class="img-responsive">
+     <header style="background-image: url('../../Pics/background_fix1.jpg'); background-size: cover; padding-bottom: 20%; filter: brightness(0.2);" class="img-responsive">
          
             <%-- Boostrap meny! --%>
 

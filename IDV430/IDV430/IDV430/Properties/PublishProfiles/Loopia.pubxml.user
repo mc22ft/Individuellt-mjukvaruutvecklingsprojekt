@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Mathias\Desktop\myroom</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/23/2014 13:23:51</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/15/2014 11:57:32</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/15/2014 11:57:32</publishTime>
+    </File>
+    <File Include="bin/IDV430.dll">
+      <publishTime>06/03/2014 21:24:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/15/2014 11:57:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/15/2014 11:57:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/15/2014 12:08:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>04/23/2014 13:25:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/15/2014 12:08:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/15/2014 12:09:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>04/15/2014 12:08:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/15/2014 12:08:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>04/15/2014 12:08:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/16/2014 16:07:11</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/23/2014 13:23:51</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/15/2014 12:08:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/16/2014 16:07:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/23/2014 13:23:51</publishTime>
+    </File>
+    <File Include="Content/blank.gif">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Content/CRICKET_.TTF">
+      <publishTime>05/27/2014 09:59:56</publishTime>
+    </File>
+    <File Include="Content/fancybox_buttons.png">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/fancybox_loading%402x.gif">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/fancybox_loading.gif">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/fancybox_overlay.png">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/fancybox_sprite%402x.png">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/fancybox_sprite.png">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/icon/Chat-icon.png">
+      <publishTime>04/25/2014 11:36:47</publishTime>
+    </File>
+    <File Include="Content/icon/facebook-icon.png">
+      <publishTime>05/24/2014 23:10:42</publishTime>
+    </File>
+    <File Include="Content/icon/flickr-icon.png">
+      <publishTime>05/24/2014 23:11:43</publishTime>
+    </File>
+    <File Include="Content/icon/google-icon.png">
+      <publishTime>05/24/2014 23:11:05</publishTime>
+    </File>
+    <File Include="Content/icon/My-Picture-old-school-icon.png">
+      <publishTime>04/24/2014 15:49:54</publishTime>
+    </File>
+    <File Include="Content/icon/Pictures-Canon-icon.png">
+      <publishTime>04/25/2014 11:36:42</publishTime>
+    </File>
+    <File Include="Content/icon/Register-icon.png">
+      <publishTime>04/25/2014 11:36:37</publishTime>
+    </File>
+    <File Include="Content/icon/skype-icon.png">
+      <publishTime>05/24/2014 23:10:09</publishTime>
+    </File>
+    <File Include="Content/icon/twitter-icon.png">
+      <publishTime>05/24/2014 23:06:37</publishTime>
+    </File>
+    <File Include="Content/icon/youtube-icon.png">
+      <publishTime>05/24/2014 23:13:29</publishTime>
+    </File>
+    <File Include="Content/jquery.fancybox-buttons.css">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/jquery.fancybox-thumbs.css">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Content/jquery.fancybox.css">
+      <publishTime>05/22/2014 15:18:57</publishTime>
+    </File>
+    <File Include="Content/SketchRockwell-Bold.ttf">
+      <publishTime>05/27/2014 09:59:53</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>06/02/2014 15:09:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/15/2014 12:36:04</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>05/31/2014 21:56:41</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Pages/Main/Main.aspx">
+      <publishTime>06/02/2014 13:01:53</publishTime>
+    </File>
+    <File Include="Pages/Shared/Error.aspx">
+      <publishTime>05/31/2014 11:00:40</publishTime>
+    </File>
+    <File Include="Pages/Shared/Menu.ascx">
+      <publishTime>05/31/2014 11:02:43</publishTime>
+    </File>
+    <File Include="Pages/Shared/MenuLoggedIn.ascx">
+      <publishTime>05/31/2014 11:03:35</publishTime>
+    </File>
+    <File Include="Pages/Shared/Site.Master">
+      <publishTime>05/31/2014 11:05:35</publishTime>
+    </File>
+    <File Include="Pages/User/Contact.aspx">
+      <publishTime>05/31/2014 11:06:28</publishTime>
+    </File>
+    <File Include="Pages/User/GalleryPage.aspx">
+      <publishTime>05/31/2014 11:17:45</publishTime>
+    </File>
+    <File Include="Pages/User/UserAdmin.aspx">
+      <publishTime>05/31/2014 11:23:24</publishTime>
+    </File>
+    <File Include="Pages/User/UserEditBlog.aspx">
+      <publishTime>06/02/2014 15:17:40</publishTime>
+    </File>
+    <File Include="Pages/User/UserMainPage.aspx">
+      <publishTime>05/31/2014 21:38:41</publishTime>
+    </File>
+    <File Include="Pages/User/UserOneBlogPage.aspx">
+      <publishTime>05/31/2014 21:46:30</publishTime>
+    </File>
+    <File Include="Pics/article-writing-pencil-small-1.jpg">
+      <publishTime>05/26/2014 10:27:17</publishTime>
+    </File>
+    <File Include="Pics/article-writing-pencil-small.jpg">
+      <publishTime>05/26/2014 10:19:10</publishTime>
+    </File>
+    <File Include="Pics/background_fix1.png">
+      <publishTime>05/26/2014 10:10:18</publishTime>
+    </File>
+    <File Include="Pics/boat.JPG">
+      <publishTime>04/24/2014 01:38:14</publishTime>
+    </File>
+    <File Include="Pics/bungee-jumping.jpg">
+      <publishTime>05/27/2014 09:42:55</publishTime>
+    </File>
+    <File Include="Pics/night.JPG">
+      <publishTime>04/24/2014 01:36:04</publishTime>
+    </File>
+    <File Include="Pics/test1.png">
+      <publishTime>05/14/2014 13:52:13</publishTime>
+    </File>
+    <File Include="Pics/testBild.jpg">
+      <publishTime>04/22/2014 18:21:23</publishTime>
+    </File>
+    <File Include="Register.aspx">
+      <publishTime>05/31/2014 22:03:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/16/2014 15:50:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.0.js">
+      <publishTime>04/23/2014 13:23:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.0.min.js">
+      <publishTime>04/23/2014 13:23:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.0.min.map">
+      <publishTime>04/23/2014 13:23:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox-buttons.js">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox-media.js">
+      <publishTime>05/22/2014 11:36:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox-thumbs.js">
+      <publishTime>05/22/2014 11:36:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox.js">
+      <publishTime>05/22/2014 15:18:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox.pack.js">
+      <publishTime>05/22/2014 15:18:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery.mousewheel-3.0.6.pack.js">
+      <publishTime>05/22/2014 11:36:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/03/2014 19:47:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

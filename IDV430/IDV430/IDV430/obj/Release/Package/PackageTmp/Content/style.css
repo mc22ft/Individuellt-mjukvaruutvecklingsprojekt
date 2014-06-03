@@ -1,0 +1,689 @@
+﻿body {
+    
+   }
+
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+*/
+
+.fancybox-wrap fancybox-desktop fancybox-type-inline fancybox-opened {
+    width:500px;
+    
+}
+
+.fancybox-thumb img {
+    width:100%;
+    
+}
+
+
+
+.head-text {
+    margin-top: 150px;
+    text-align:center;
+}
+
+.middle-text {
+    color:#CECFD6;
+    width: 50%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+
+}
+.middle-text h1 {
+     font-size:50px;
+    font-weight:900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.middle-text h4 {
+    font-size:20px;
+    margin-top:20px;
+    margin-bottom: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border: 0px solid transparent;
+
+}
+
+
+
+.navbar-default .navbar-brand {
+color: dimgray;
+font-size:25px;
+margin-left:40px;
+
+
+}
+.navbar-default .navbar-nav > li > a {
+color: gray;
+font-size:17px;
+margin-right:30px;
+}
+
+
+.opacity {     
+   color:dimgray;
+   
+}
+
+.topMeny {
+    padding-top: 15px;
+}
+
+.blackText {
+    color:black;
+}
+
+.signupButton {
+    background-color:#f0ad4e; 
+}
+
+.signupOutButton {
+    background-color: #f0ad4e;
+    margin-top: 8px;
+}
+
+
+
+.icon-wrapper {
+    margin: 60px;
+}
+.icon-large{
+    
+    background-repeat: no-repeat;
+    background-position:center; 
+    padding: 130px;
+}
+.fa-cloud {
+    background-image: url(icon/Chat-icon.png);
+}
+.fa-picture {
+    background-image: url(icon/Pictures-Canon-icon.png);
+}
+.fa-lightbulb-o {
+    background-image: url(icon/Register-icon.png);
+}
+.overlay-text {
+    margin-bottom: 40px;
+    
+}
+
+
+#photoBetween {
+    background-image: url('../Pics/night.JPG');
+    background-size: cover;
+}
+
+
+/*thegallery slide*/
+#theGallery {
+
+    color:#1C1D21;
+    height:400px;
+    background-color:#ECF4FF;
+    font-size:150%;
+    border-bottom: 1px solid #1C1D21;
+    border-top: 1px solid #1C1D21;
+}
+.image-inner {    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide {
+    width: 100%;    
+}
+
+.carousel-indicators {
+    margin-bottom: -20px;
+}
+.carousel-caption{
+    margin-bottom: -25px;
+}
+
+.control-slide {
+   color: #d9534f;
+   background-color:#EEEFF7;
+}
+
+
+/*OmyRoom*/
+#OmyRoom {
+    color:#1C1D21;
+    background-color:#92CDCF;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+/*theBlogg*/
+#theBlogg { 
+    color:#1C1D21;
+    height:400px;
+    background-color:darkorange;
+    font-size:150%;
+    border-bottom: 1px solid #1C1D21;   
+    border-top: 1px solid #1C1D21;
+}
+
+/*theBlogg -- Fonts*/
+
+@font-face { 
+    font-family: customfont; src: url(SketchRockwell-Bold.ttf); 
+}
+@font-face { 
+    font-family: customfont-p; src: url(CRICKET_.TTF); 
+}
+.customfont {
+    margin: 0;
+    font-family: "customfont", Verdana, Tahoma;
+    
+}
+.customfont-p {
+    margin-top: 30px;
+    font-family: "customfont-p", Verdana, Tahoma;
+    font-size: 170%;
+    font-weight: bold;
+    
+}
+
+.font-p-div {
+    height: 355px;
+    overflow: hidden;
+}
+
+
+
+
+/*Footer*/
+.footer {
+    background-color:#EEEFF7;
+    padding-bottom:20px;
+
+    
+    border-top: solid 0.1em;
+    border-top-color: #BDBEC4;
+}
+
+
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF    
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+
+        Röd         #d9534f
+
+        Ljusblå     #D5E5FF
+        Ljusblåare  #E1EEFF
+        Ljusblåast  #ECF4FF
+        
+*/
+
+
+
+/* JavaScript lägger till denna och tar bort när man scrollar för menyn ska fälja med
+.fixed {
+    position:fixed;
+    
+
+    background-color: black;
+    z-index:77;
+     left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+
+} */
+
+    /*Skriva blogg sidan*/
+
+.new-blog-headline{
+ margin-top: 110px;
+ margin-left: 30px;
+}
+.new-blog-content{
+ margin-top: 30px;
+ margin-left: 30px;
+}
+
+
+.blog-form {
+   
+    margin-left: 50px;
+}
+.blog-form div {
+   
+}
+
+.blog-form-under {
+    border-bottom: 1px solid #1C1D21;
+    width: 1000%;
+}
+
+.BlogName {
+    width: 200%;
+    
+}
+
+.BlogContent {
+    width: 300%;
+    height: 200px;
+}
+
+.my-blog-list {
+    /*margin-top:50px;*/
+    margin-left: 50px;
+    margin-right:50px;
+    border-bottom: solid 0.1em;
+    border-bottom-color: #BDBEC4;
+    width: auto;
+    
+
+}
+.my-blog-list div {
+    margin-left: 8%;
+}
+.comment-button {
+    margin-bottom: 10px;
+}
+
+
+/*
+    Färger som jag använder
+
+         Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF    
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+
+        Röd         #d9534f
+        
+*/
+
+.margin-bottom-blog {
+    margin-bottom:40px;
+}
+
+.list-blog-content {
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-bottom:60px;
+}
+
+
+    /*Inloggad meny!!!*/
+
+.fixedBlack {
+    position:fixed;
+    background-color: #31353D;
+    z-index:77;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 0 !important;       
+}
+a.hover:hover {
+    color:white;
+}
+
+
+
+.add{
+    border:solid 1px black;
+    
+}
+
+.add div {
+    
+    text-align:center;
+}
+.Frame{
+    margin-top:30px;
+}
+
+
+/*Loggin nav*/
+
+.loginNav li a {
+   
+}
+
+/*Login / Registrera sig*/
+.login-register {
+    Width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+/*Redigera blog*/
+
+.edit-blog {
+    margin-top:120px;
+    /*height:400px;*/
+    margin-bottom:110px;
+    background-color: #ECF4FF;
+}
+
+.edit-blog1 {
+    margin-top:120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom:110px;
+}
+
+.readBlogPost {
+    margin-left: 10%;
+    margin-right: 0;
+    width: 80%;
+    margin-bottom: -80px;
+}
+.readBlogPost-comment{
+    margin-left: 10%;
+    margin-right: 0;
+    width: 80%;
+    margin-bottom: -80px;
+}
+
+.readContent {
+    Width:100%;
+    Height:250px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+.readEditContent {
+    Width:100%;
+    Height:240px;
+    margin-bottom: -15px;
+    border-radius: 5px;
+    overflow: auto;    
+}
+
+.editHeadLine {
+    margin-bottom: 15px;
+    
+}
+
+.emptyPost {
+    margin-left:11%;
+    margin-top:60px;
+}
+
+/*Kommentarer*/
+
+.comment-Blog {
+    border: 1px solid #BDBEC4;
+    margin-left: 15%;
+    margin-right: 0;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.comment-Blog h4 {
+    background-color:#BDBEC4;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0;
+    padding-left:10px;
+}
+.comment-Blog-content {
+    margin-left:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.comment-Blog-bottom {
+    background-color: #EEEFF7;
+    border-top: 1px solid #BDBEC4;
+}
+.comment-Blog-bottom p {
+    margin: 0;
+    /*width: 10%;*/
+    padding: 2px;
+    margin-left:4px;
+}
+.make-comment-Blog-bottom {
+    margin: 0;
+    width: 100%;
+    padding: 2px;
+    background-color: #EEEFF7;
+    border-top: 1px solid #BDBEC4;
+    margin-top:30px;
+}
+.comment-Blog-content-div1 {
+    float:left;
+}
+.comment-Blog-content-div1 div {
+    margin-bottom: 5px;
+}
+.comment-Blog-content-div1-3 {
+    margin-right: 10px;
+}
+.comment-Blog-content-div2{
+    margin-left: 40%;
+}
+.comment-Blog-content-div2-txtbox {
+   height: 90px;
+    width: 75%;
+}
+
+.make-comment-Blog {
+    border: 1px solid #BDBEC4;
+    margin-left: 87%;
+    margin-right: 0;
+    width: 250%;
+    margin-bottom: 30px;
+}
+.make-comment-Blog h3 {
+    background-color:#BDBEC4;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0;
+    padding-left:10px;
+}
+.delite-button {
+    color:#1C1D21;
+    background-color:#d9534f;
+    padding: 2px;
+    text-decoration:none;
+    float: right;
+}
+
+.footer {
+}
+
+/*
+    Färger som jag använder
+
+        Svart       #1C1D21
+        Grå         #31353D
+        Blå         #445878
+        Ljusblå     #90BBFF    
+        Turkos      #92CDCF
+        Vit/LjusGrå #EEEFF7
+        Mörk grå    #BDBEC4
+
+        Röd         #d9534f
+*/
+
+ /*GALLERIET*/
+
+ .GalleryH2 {
+     margin-top: 100px;
+    text-align: center;
+ }
+
+ .mainGalleryWindow{
+    border: solid 1px #BDBEC4;
+    overflow: auto;
+    margin: 1% 5% 5% 5%;
+    height: 500px;
+    
+ }
+
+ .imgContent {
+     float: left;
+ }
+
+ .imgContent img {
+     width:100%;
+ }
+
+ .Gallery-button {
+     /*margin-bottom: 5%;
+     margin-left: 5%;*/
+     margin: 5% 5% 2% 5%;
+     
+ }
+
+.gallery-fileupload-button {
+     margin-bottom:5px;
+ }
+
+.gallery-ok-message {
+    text-align:center;
+    height: 20px;
+    color: #445878;
+}
+
+
+
+/*LOGIN*/
+
+.StatusField {
+    color:#d9534f;
+}
+
+/*Övrigt*/
+
+.no-blogpost {
+    margin-left:30px; 
+    color: #d9534f;
+    margin-bottom: 80px;
+    text-align:center;
+}
+
+.blog-send-buttom { 
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.delite-button {
+color: #1C1D21;
+background-color: #d9534f;
+padding: 2px;
+text-decoration: none;
+/*float: right;*/
+}
+
+    /*ValidationSummary*/
+
+.ValidationSummary-div {
+
+}
+.alert-info {
+    color:#d9534f;
+    margin-top: 70px;
+    margin-bottom: -100px;
+    
+    text-align: center;
+    
+   
+}
+.alert-info ul {
+   
+    
+    list-style-type: none;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4+ ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+}
+
+/* iPhone 5s ----------- */
+/* You've spent way to much on a phone */
+
